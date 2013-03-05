@@ -1,0 +1,23 @@
+{
+    "name": "anahkiasen/illuminage",
+    "description": "",
+    "authors": [
+        {
+            "name": "Maxime Fabre",
+            "email": "ehtnam6@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Anahkiasen\\Illuminage": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
