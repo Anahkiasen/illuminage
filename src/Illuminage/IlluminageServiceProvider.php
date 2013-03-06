@@ -19,7 +19,19 @@ class IlluminageServiceProvider extends ServiceProvider
    */
   public function boot()
   {
-    $this->package('anahkiasen/illuminage');
+    // Register config file
+    $this->app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
+
+    $this->app->bind('illuminage.cache', 'Illuminage\Cache');
+
+    $this->app->bind('illuminage', function($app) {
+      $engine = $app['config']->get('illuminage::image_engine');
+      $engine = 'Gd';
+      $imagine = '\Imagine\\'.$engine.'\Imagine';
+      $imagine = new $imagine;
+
+      return new Illuminage($app['illuminage.cache'], $app['url'], $imagine);
+    });
   }
 
   /**
