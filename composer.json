@@ -19,6 +19,9 @@
     "illuminate/support": "4.0.x",
     "imagine/Imagine": "dev-develop"
   },
+  "require-dev": {
+    "mockery/mockery": "dev-master"
+  },
   "autoload": {
     "psr-0": {
       "Illuminage": "src/"
