@@ -27,9 +27,14 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
         return 'http://test/public/'.$image;
       });
     });
+
+    $config = Mockery::mock('Illuminate\Config\Repository', function($mock) {
+      $mock->shouldReceive('get')->with('illuminage::cache_folder')->andReturn('');
+    });
+
     $cache = new Illuminage\Cache;
     $imagine = new Imagine\Gd\Imagine;
 
-    return new Illuminage\Illuminage($cache, $url, $imagine);
+    return new Illuminage\Illuminage($config, $cache, $url, $imagine);
   }
 }

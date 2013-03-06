@@ -142,6 +142,12 @@ class Thumb
    */
   public function __toString()
   {
+    try {
+      $this->render();
+    }
+    catch (\Exception $e) {
+      var_dump($e->getMessage());
+    }
     return $this->render();
   }
 }
