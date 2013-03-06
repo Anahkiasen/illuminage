@@ -15,7 +15,7 @@ What you get from those calls are not direct HTML strings but objects implementi
 
 ```php
 $thumb = Thumb::square('image.jpg', 200)->addClass('image-wide');
-$thumb = $thumb->wrap('figure')->id('avatar');
+$thumb = $thumb->wrapWith('figure')->id('avatar');
 
 echo $thumb;
 // <figure id="avatar"><img class="image-wide" src="pathToThumbnail.jpg"></figure>
