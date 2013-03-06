@@ -1,6 +1,42 @@
 {
-    "hash": "c1be06a0c5941d739d44962defcae7a3",
+    "hash": "44eda3e29b5a5d4decbdc7f9927b89d6",
     "packages": [
+        {
+            "name": "anahkiasen/html-object",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Anahkiasen/html-object.git",
+                "reference": "c5fd2b55bfeb97418a625f5110eca568ccafddc8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/c5fd2b55bfeb97418a625f5110eca568ccafddc8",
+                "reference": "c5fd2b55bfeb97418a625f5110eca568ccafddc8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HtmlObject": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anahkiasen",
+                    "email": "ehtnam6@gmail.com"
+                }
+            ],
+            "description": "A set of classes to create and manipulate HTML objects abstractions",
+            "time": "2013-03-06 12:38:26"
+        },
         {
             "name": "illuminate/support",
             "version": "dev-master",
@@ -107,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "bac68ea04775a33c2da668de646ad9827dc4c380"
+                "reference": "0f008989771458dc15204a57f67d21b6b01f73ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/bac68ea04775a33c2da668de646ad9827dc4c380",
-                "reference": "bac68ea04775a33c2da668de646ad9827dc4c380",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/0f008989771458dc15204a57f67d21b6b01f73ed",
+                "reference": "0f008989771458dc15204a57f67d21b6b01f73ed",
                 "shasum": ""
             },
             "require": {
@@ -152,7 +188,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2013-02-17 12:15:28"
+            "time": "2013-03-06 08:36:42"
         }
     ],
     "aliases": [
@@ -160,6 +196,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "anahkiasen/html-object": 20,
         "imagine/imagine": 20,
         "mockery/mockery": 20
     },

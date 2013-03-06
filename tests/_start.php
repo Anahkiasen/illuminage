@@ -20,6 +20,12 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
     $this->thumb = new Thumb('foo.jpg', 100, 100);
   }
 
+  public function tearDown()
+  {
+    $testThumb = __DIR__.'/public/d49d9f3c769ee076be9ef21ec23f57d6.jpg';
+    if (file_exists($testThumb)) unlink($testThumb);
+  }
+
   protected static function getIlluminage()
   {
     $url = Mockery::mock('Illuminate\Routing\UrlGenerator', function($mock) {

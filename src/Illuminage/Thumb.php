@@ -2,11 +2,12 @@
 namespace Illuminage;
 
 use App;
+use HtmlObject\Traits\Tag;
 
 /**
  * The thumb of an image
  */
-class Thumb
+class Thumb extends Tag
 {
   /**
    * The thumb width
@@ -35,6 +36,20 @@ class Thumb
    * @var Illuminage
    */
   protected $illuminage;
+
+  /**
+   * The HtmlObject element
+   *
+   * @var string
+   */
+  protected $element = 'img';
+
+  /**
+   * Set as self-closing element
+   *
+   * @var boolean
+   */
+  protected $isSelfClosing = true;
 
   /**
    * Build a new Thumb
@@ -130,24 +145,10 @@ class Thumb
    *
    * @return string
    */
-  public function render()
+  public function injectProperties()
   {
-    return '<img src="' .$this->getThumb(). '" />';
-  }
-
-  /**
-   * Renders the image
-   *
-   * @return string
-   */
-  public function __toString()
-  {
-    try {
-      $this->render();
-    }
-    catch (\Exception $e) {
-      var_dump($e->getMessage());
-    }
-    return $this->render();
+    return array(
+      'src' => $this->getThumb()
+    );
   }
 }

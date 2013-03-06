@@ -17,6 +17,7 @@
   "require": {
     "php": ">=5.3.0",
     "illuminate/support": "4.0.x",
+    "anahkiasen/html-object": "dev-master",
     "imagine/Imagine": "dev-develop"
   },
   "require-dev": {

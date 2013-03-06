@@ -10,3 +10,13 @@ echo Thumb::create('image.jpg', 200, 300)
 // Shortcuts
 echo Thumb::square('image.jpg', 300)
 ```
+
+What you get from those calls are not direct HTML strings but objects implementing the [HtmlObject\Tag](https://github.com/Anahkiasen/html-object) abstract, so you can use all sorts of HTML manipulation methods on them :
+
+```php
+$thumb = Thumb::square('image.jpg', 200)->addClass('image-wide');
+$thumb = $thumb->wrap('figure')->id('avatar');
+
+echo $thumb;
+// <figure id="avatar"><img class="image-wide" src="pathToThumbnail.jpg"></figure>
+```
