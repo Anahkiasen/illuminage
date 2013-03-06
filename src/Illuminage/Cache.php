@@ -29,7 +29,7 @@ class Cache
    */
   public function getCachePathOf(Thumb $thumb)
   {
-    return App::make('path.public').'/'.$this->getHashOf($thumb);
+    return App::make('illuminage')->getCacheFolder().$this->getHashOf($thumb);
   }
 
   /**

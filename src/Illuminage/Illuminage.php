@@ -3,6 +3,7 @@ namespace Illuminage;
 
 use App;
 use Exception;
+use Illuminate\Config\Repository as Config;
 use Illuminate\Routing\UrlGenerator;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
@@ -40,8 +41,9 @@ class Illuminage
    * @param UrlGenerator $url
    * @param Imagine      $imagine
    */
-  public function __construct(Cache $cache, UrlGenerator $url, $imagine)
+  public function __construct(Config $config, Cache $cache, UrlGenerator $url, $imagine)
   {
+    $this->config  = $config;
     $this->cache   = $cache;
     $this->imagine = $imagine;
     $this->url     = $url;
@@ -58,7 +60,7 @@ class Illuminage
   {
     // If the image is in cache, return it
     if ($this->cache->isCached($thumb)) {
-      return $this->url->asset($this->cache->getHashOf($thumb));
+      return $this->getUrlTo($thumb);
     }
 
     // Setup Imagine
@@ -76,6 +78,30 @@ class Illuminage
       ->thumbnail($box, $mode)
       ->save($this->cache->getCachePathOf($thumb));
 
-    return $this->url->asset($this->cache->getHashOf($thumb));
+    return $this->getUrlTo($thumb);
+  }
+
+  /**
+   * Get the URL to an image
+   *
+   * @param Thumb $thumb 
+   *
+   * @return string 
+   */
+  public function getUrlTo(Thumb $thumb)
+  {
+    $cache = $this->config->get('illuminage::cache_folder');
+
+    return $this->url->asset($cache.$this->cache->getHashOf($thumb));
+  }
+
+  /**
+   * Get the cache folder
+   *
+   * @return string
+   */
+  public function getCacheFolder()
+  {
+    return App::make('path.public').'/'.$this->config->get('illuminage::cache_folder');
   }
 }
