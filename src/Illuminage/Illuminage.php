@@ -2,10 +2,14 @@
 namespace Illuminage;
 
 use App;
+use Exception;
+use Illuminate\Routing\UrlGenerator;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
-use Illuminate\Routing\UrlGenerator;
 
+/**
+ * Handles image creation and caching
+ */
 class Illuminage
 {
   /**
@@ -39,8 +43,8 @@ class Illuminage
   public function __construct(Cache $cache, UrlGenerator $url, $imagine)
   {
     $this->cache   = $cache;
-    $this->url     = $url;
     $this->imagine = $imagine;
+    $this->url     = $url;
   }
 
   /**
@@ -62,7 +66,9 @@ class Illuminage
     $box   = new Box($thumb->getWidth(), $thumb->getHeight());
 
     $path = $thumb->getImagePath();
-    if (!file_exists($path)) return false;
+    if (!file_exists($path)) {
+      throw new Exception('The image '.$path. ' does not exist');
+    }
 
     // Generate the thumbnail
     $this->imagine

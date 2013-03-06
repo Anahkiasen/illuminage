@@ -3,6 +3,9 @@ namespace Illuminage;
 
 use App;
 
+/**
+ * The thumb of an image
+ */
 class Thumb
 {
   /**
