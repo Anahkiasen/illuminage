@@ -26,11 +26,9 @@ class IlluminageServiceProvider extends ServiceProvider
 
     $this->app->bind('illuminage', function($app) {
       $engine = $app['config']->get('illuminage::image_engine');
-      $engine = 'Gd';
       $imagine = '\Imagine\\'.$engine.'\Imagine';
-      $imagine = new $imagine;
 
-      return new Illuminage($app['illuminage.cache'], $app['url'], $imagine);
+      return new Illuminage($app['illuminage.cache'], $app['url'], new $imagine);
     });
   }
 
