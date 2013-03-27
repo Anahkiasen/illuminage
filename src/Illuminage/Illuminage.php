@@ -57,27 +57,25 @@ class Illuminage
   }
 
   /**
-   * Generate a Thumb
+   * Bind an Imagine image to an Image
    *
-   * @param Thumb $thumb
+   * @param Image $image
    *
    * @return Imagine
    */
-  public function createThumb(Thumb $thumb)
+  public function bindImagine(Image $image)
   {
-    // Setup Imagine
-    $mode  = ImageInterface::THUMBNAIL_OUTBOUND;
-    $box   = new Box($thumb->getWidth(), $thumb->getHeight());
+    $imagine = $this->imagine->open($this->getPathOf($image));
 
-    $path = $thumb->getImagePath();
-    if (!file_exists($path)) {
-      throw new Exception('The image '.$path. ' does not exist');
+    // Crop if Thumb
+    if ($image instanceof Thumb) {
+      $mode = ImageInterface::THUMBNAIL_OUTBOUND;
+      $box  = new Box($image->getWidth(), $image->getHeight());
+
+      $imagine->thumbnail($box, $mode);
     }
 
-    // Generate the Imagine instance
-    return $this->imagine
-      ->open($path)
-      ->thumbnail($box, $mode);
+    return $imagine;
   }
 
   /**
@@ -87,7 +85,7 @@ class Illuminage
    *
    * @return string Path to the generated image
    */
-  public function renderThumb(Thumb $thumb)
+  public function cacheAndRender(Thumb $thumb)
   {
     // If the image is in cache, return it
     if ($this->cache->isCached($thumb)) {
@@ -99,6 +97,27 @@ class Illuminage
       ->save($this->cache->getCachePathOf($thumb));
 
     return $this->getUrlTo($thumb);
+  }
+
+  ////////////////////////////////////////////////////////////////////
+  //////////////////////////////HELPERS //////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+
+  /**
+   * Get the path of an image
+   *
+   * @param Image $image
+   *
+   * @return string
+   */
+  protected function getPathOf(Image $image)
+  {
+    $path = $image->getImagePath();
+    if (!file_exists($path)) {
+      throw new Exception('The image '.$path. ' does not exist');
+    }
+
+    return $path;
   }
 
   /**
