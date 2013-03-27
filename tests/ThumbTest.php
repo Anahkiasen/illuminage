@@ -31,20 +31,20 @@ class ThumbTest extends IlluminageTests
 
   public function testCanRenderThumb()
   {
-    $this->assertEquals('<img src="http://test/public/d49d9f3c769ee076be9ef21ec23f57d6.jpg">', $this->thumb->render());
+    $this->assertEquals('<img src="http://test/public/1734d4ae7f724051dfec8b2796410edb.jpg">', $this->thumb->render());
 
     unlink($this->cache->getCachePathOf($this->thumb));
   }
 
   public function testCanRenderThumbOnStringHint()
   {
-    $this->assertEquals('<img src="http://test/public/d49d9f3c769ee076be9ef21ec23f57d6.jpg">', (string) $this->thumb);
+    $this->assertEquals('<img src="http://test/public/1734d4ae7f724051dfec8b2796410edb.jpg">', (string) $this->thumb);
   }
 
   public function testThumbsCorrectlyExtendTag()
   {
     $this->thumb->addClass('foo');
 
-    $this->assertEquals('<img class="foo" src="http://test/public/d49d9f3c769ee076be9ef21ec23f57d6.jpg">', (string) $this->thumb);
+    $this->assertEquals('<img class="foo" src="http://test/public/1734d4ae7f724051dfec8b2796410edb.jpg">', (string) $this->thumb);
   }
 }

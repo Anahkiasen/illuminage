@@ -17,7 +17,10 @@ class Cache
    */
   public function getHashOf(Thumb $thumb)
   {
-    return md5($thumb->getImage().$thumb->getWidth().'x'.$thumb->getHeight()).'.jpg';
+    $filehash  = md5_file($thumb->getImagePath());
+    $extension = pathinfo($thumb->getImagePath(), PATHINFO_EXTENSION);
+
+    return md5($filehash.$thumb->getWidth().'x'.$thumb->getHeight()).'.'.$extension;
   }
 
   /**

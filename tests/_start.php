@@ -22,7 +22,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 
   public function tearDown()
   {
-    $testThumb = __DIR__.'/public/d49d9f3c769ee076be9ef21ec23f57d6.jpg';
+    $testThumb = __DIR__.'/public/1734d4ae7f724051dfec8b2796410edb.jpg';
     if (file_exists($testThumb)) unlink($testThumb);
   }
 

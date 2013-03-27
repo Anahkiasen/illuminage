@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Anahkiasen/html-object.git",
-                "reference": "c5fd2b55bfeb97418a625f5110eca568ccafddc8"
+                "reference": "b3629dafe07df940620f0c6f4846fc046e98c79f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/c5fd2b55bfeb97418a625f5110eca568ccafddc8",
-                "reference": "c5fd2b55bfeb97418a625f5110eca568ccafddc8",
+                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/b3629dafe07df940620f0c6f4846fc046e98c79f",
+                "reference": "b3629dafe07df940620f0c6f4846fc046e98c79f",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
                 }
             ],
             "description": "A set of classes to create and manipulate HTML objects abstractions",
-            "time": "2013-03-06 12:38:26"
+            "time": "2013-03-20 16:36:55"
         },
         {
             "name": "illuminate/support",
@@ -44,12 +44,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "d77757feb3fd0846bf3e44c79be8abb0d6cb0cce"
+                "reference": "0b74ad320752e5fb9beb6f52e5ea119f37e3a9b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/d77757feb3fd0846bf3e44c79be8abb0d6cb0cce",
-                "reference": "d77757feb3fd0846bf3e44c79be8abb0d6cb0cce",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/0b74ad320752e5fb9beb6f52e5ea119f37e3a9b5",
+                "reference": "0b74ad320752e5fb9beb6f52e5ea119f37e3a9b5",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "Various utilities and support functions.",
-            "time": "2013-03-04 21:32:55"
+            "time": "2013-03-26 19:56:26"
         },
         {
             "name": "imagine/Imagine",
@@ -143,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "0f008989771458dc15204a57f67d21b6b01f73ed"
+                "reference": "84b43613e4346d7892ee4375a30614edf1ad36c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/0f008989771458dc15204a57f67d21b6b01f73ed",
-                "reference": "0f008989771458dc15204a57f67d21b6b01f73ed",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/84b43613e4346d7892ee4375a30614edf1ad36c2",
+                "reference": "84b43613e4346d7892ee4375a30614edf1ad36c2",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2013-03-06 08:36:42"
+            "time": "2013-03-22 12:04:50"
         }
     ],
     "aliases": [
