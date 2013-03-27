@@ -4,6 +4,9 @@ use Illuminage\Thumb;
 
 abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 {
+  protected $cache;
+  protected $thumb;
+
   public static function setUpBeforeClass()
   {
     $illuminage = static::getIlluminage();

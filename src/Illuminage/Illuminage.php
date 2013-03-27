@@ -54,15 +54,10 @@ class Illuminage
    *
    * @param Thumb $thumb
    *
-   * @return string Path to the generated image
+   * @return Imagine
    */
   public function createThumb(Thumb $thumb)
   {
-    // If the image is in cache, return it
-    if ($this->cache->isCached($thumb)) {
-      return $this->getUrlTo($thumb);
-    }
-
     // Setup Imagine
     $mode  = ImageInterface::THUMBNAIL_OUTBOUND;
     $box   = new Box($thumb->getWidth(), $thumb->getHeight());
@@ -72,10 +67,28 @@ class Illuminage
       throw new Exception('The image '.$path. ' does not exist');
     }
 
-    // Generate the thumbnail
-    $this->imagine
+    // Generate the Imagine instance
+    return $this->imagine
       ->open($path)
-      ->thumbnail($box, $mode)
+      ->thumbnail($box, $mode);
+  }
+
+  /**
+   * Renders the final thumb
+   *
+   * @param Thumb $thumb
+   *
+   * @return string Path to the generated image
+   */
+  public function renderThumb(Thumb $thumb)
+  {
+    // If the image is in cache, return it
+    if ($this->cache->isCached($thumb)) {
+      return $this->getUrlTo($thumb);
+    }
+
+    // Save the thumb
+    $thumb->getImagine()
       ->save($this->cache->getCachePathOf($thumb));
 
     return $this->getUrlTo($thumb);
@@ -84,9 +97,9 @@ class Illuminage
   /**
    * Get the URL to an image
    *
-   * @param Thumb $thumb 
+   * @param Thumb $thumb
    *
-   * @return string 
+   * @return string
    */
   public function getUrlTo(Thumb $thumb)
   {

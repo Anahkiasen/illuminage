@@ -2,7 +2,9 @@
 namespace Illuminage;
 
 use App;
+use Closure;
 use HtmlObject\Traits\Tag;
+use Imagine\Image\Color;
 
 /**
  * The thumb of an image
@@ -38,6 +40,13 @@ class Thumb extends Tag
   protected $illuminage;
 
   /**
+   * The Imagine instance
+   *
+   * @var Imagine
+   */
+  protected $imagine;
+
+  /**
    * The HtmlObject element
    *
    * @var string
@@ -63,7 +72,9 @@ class Thumb extends Tag
     $this->image      = $image;
     $this->width      = $width;
     $this->height     = $height;
+
     $this->illuminage = App::make('illuminage');
+    $this->imagine    = $this->illuminage->createThumb($this);
   }
 
   /**
@@ -133,7 +144,77 @@ class Thumb extends Tag
    */
   public function getThumb()
   {
-    return $this->illuminage->createThumb($this);
+    return $this->illuminage->renderThumb($this);
+  }
+
+  /**
+   * Get the Imagine instance
+   *
+   * @return Imagine
+   */
+  public function getImagine()
+  {
+    return $this->imagine;
+  }
+
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////// FILTERS /////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+
+  /**
+   * Applies a Closure to the Imagine instance
+   *
+   * @param Closure $closure
+   */
+  public function onImage(Closure $closure)
+  {
+    $closure($this->imagine);
+
+    return $this;
+  }
+
+  /**
+   * Inverts the colors
+   */
+  public function negative()
+  {
+    $this->imagine->effects()->negative();
+
+    return $this;
+  }
+
+  /**
+   * Makes the image black and white
+   */
+  public function grayscale()
+  {
+    $this->imagine->effects()->grayscale();
+
+    return $this;
+  }
+
+  /**
+   * Applies a Gamma correction
+   *
+   * @param integer $gamma The factor
+   */
+  public function gamma($gamma = 1)
+  {
+    $this->imagine->effects()->gamma($gamma);
+
+    return $this;
+  }
+
+  /**
+   * Colorizes the image
+   *
+   * @param string $color An hexadecimal value
+   */
+  public function colorize($color)
+  {
+    $this->imagine->effects()->colorize(new Color($color));
+
+    return $this;
   }
 
   ////////////////////////////////////////////////////////////////////

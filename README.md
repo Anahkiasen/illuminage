@@ -20,3 +20,13 @@ $thumb = $thumb->wrapWith('figure')->id('avatar');
 echo $thumb;
 // <figure id="avatar"><img class="image-wide" src="pathToThumbnail.jpg"></figure>
 ```
+
+You can at all time access the original Imagine instance used to render the images :
+
+```php
+$thumb = new Thumb('foo.jpg', 200, 200);
+
+echo $thumb->grayscale()->onImage(function($image) {
+  $image->flipVertically()->rotate(45);
+});
+```
