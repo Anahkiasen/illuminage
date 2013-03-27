@@ -72,7 +72,7 @@ class Illuminage
       $mode = ImageInterface::THUMBNAIL_OUTBOUND;
       $box  = new Box($image->getWidth(), $image->getHeight());
 
-      $imagine->thumbnail($box, $mode);
+      $imagine = $imagine->thumbnail($box, $mode);
     }
 
     return $imagine;
