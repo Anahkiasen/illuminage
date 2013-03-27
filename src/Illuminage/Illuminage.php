@@ -35,6 +35,13 @@ class Illuminage
   protected $cache;
 
   /**
+   * The Config instance
+   *
+   * @var Config
+   */
+  protected $config;
+
+  /**
    * Set up Illuminage
    *
    * @param Cache        $cache
