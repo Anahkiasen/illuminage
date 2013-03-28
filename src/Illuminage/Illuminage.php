@@ -146,14 +146,4 @@ class Illuminage
     return App::make('path.public').'/'.$this->config->get('illuminage::cache_folder');
   }
 
-  /**
-   * Get the Cache instance
-   *
-   * @return Cache
-   */
-  public function getCache()
-  {
-    return $this->cache;
-  }
-
 }

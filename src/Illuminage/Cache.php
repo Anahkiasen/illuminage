@@ -18,8 +18,10 @@ class Cache
    */
   public function getHashOf(Image $image)
   {
+
     // Implode the salts
-    $filehash[] = md5_file($image->getImagePath());
+    $filehash = md5_file($image->getImagePath());
+    $filehash = array($filehash);
     foreach ($image->getSalt() as $name => $salt) {
       $filehash[] = $name.'-'.$salt;
     }

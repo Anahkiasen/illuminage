@@ -1,6 +1,4 @@
 <?php
-use Illuminage\Image;
-
 class ImageTest extends IlluminageTests
 {
   public function testCanAccessSalts()
@@ -36,13 +34,13 @@ class ImageTest extends IlluminageTests
 
   public function testCanResizeOnTheFly()
   {
-    $this->assertEquals('9aafd0ab864209781d3af94758cd8935.jpg', $this->image->resize(200, 250)->getCacheHash());
+    $this->assertEquals('http://test/public/9aafd0ab864209781d3af94758cd8935.jpg', $this->image->resize(200, 250)->getThumb());
   }
 
   public function testCanApplyFilters()
   {
     $image = $this->image->resize(300, 300)->grayscale();
 
-    $this->assertEquals('9edc0916aeae4ae44b64be7058328c0d.jpg', $image->getCacheHash());
+    $this->assertEquals('http://test/public/9edc0916aeae4ae44b64be7058328c0d.jpg', $image->getThumb());
   }
 }

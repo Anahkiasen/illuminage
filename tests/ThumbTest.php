@@ -5,7 +5,7 @@ class ThumbTest extends IlluminageTests
 {
   public function testCanCreateThumb()
   {
-    $this->assertInstanceOf('Illuminage\Thumb', $this->thumb);
+    $this->assertInstanceOf('Illuminage\Thumb', Thumb::create('foo.jpg', 200, 300));
   }
 
   public function testCanCreateThumbViaStaticMethods()

@@ -95,16 +95,6 @@ class Image extends Tag
   }
 
   /**
-   * Get the cache hash of the Image
-   *
-   * @return string
-   */
-  public function getCacheHash()
-  {
-    return $this->illuminage->getCache()->getHashOf($this);
-  }
-
-  /**
    * Get the Image's salts
    *
    * @param string $salt A particular salt to get, all if null
