@@ -12,40 +12,47 @@ class Cache
   /**
    * Get the cache hash of an image
    *
-   * @param Thumb $thumb
+   * @param Image $image
    *
    * @return string
    */
-  public function getHashOf(Thumb $thumb)
+  public function getHashOf(Image $image)
   {
-    $filehash  = md5_file($thumb->getImagePath());
-    $extension = pathinfo($thumb->getImagePath(), PATHINFO_EXTENSION);
+    // Implode the salts
+    $filehash[] = md5_file($image->getImagePath());
+    foreach ($image->getSalt() as $name => $salt) {
+      $filehash[] = $name.'-'.$salt;
+    }
 
-    return md5($filehash.$thumb->getWidth().'x'.$thumb->getHeight()).'.'.$extension;
+    // Get string hash and extension
+    $filehash  = implode('-', $filehash);
+    $extension = pathinfo($image->getImagePath(), PATHINFO_EXTENSION);
+
+    return md5($filehash).'.'.$extension;
   }
 
   /**
    * Get the path where an image will be cached
    *
-   * @param Thumb $thumb
+   * @param Image $image
    *
    * @return string
    */
-  public function getCachePathOf(Thumb $thumb)
+  public function getCachePathOf(Image $image)
   {
-    return App::make('illuminage')->getCacheFolder().$this->getHashOf($thumb);
+    return App::make('illuminage')->getCacheFolder().$this->getHashOf($image);
   }
 
   /**
    * Check if an image is in cache
    *
-   * @param Thumb $thumb
+   * @param Image $image
    *
    * @return boolean
    */
-  public function isCached(Thumb $thumb)
+  public function isCached(Image $image)
   {
-    return file_exists($this->getCachePathOf($thumb));
+    return file_exists($this->getCachePathOf($image));
   }
 
 }

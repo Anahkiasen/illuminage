@@ -1,11 +1,15 @@
 <?php
 use Illuminage\Cache;
+use Illuminage\Image;
 use Illuminage\Thumb;
 
 abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 {
   protected $cache;
+  protected $image;
   protected $thumb;
+
+  protected $hash = '4169d8194bc52a4134b8bf365bc4f502.jpg';
 
   public static function setUpBeforeClass()
   {
@@ -20,12 +24,13 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
   public function setUp()
   {
     $this->cache = new Cache;
+    $this->image = new Image('foo.jpg');
     $this->thumb = new Thumb('foo.jpg', 100, 100);
   }
 
   public function tearDown()
   {
-    $testThumb = __DIR__.'/public/1734d4ae7f724051dfec8b2796410edb.jpg';
+    $testThumb = __DIR__.'/public/'.$this->hash;
     if (file_exists($testThumb)) unlink($testThumb);
   }
 

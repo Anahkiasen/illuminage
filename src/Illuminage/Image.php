@@ -14,18 +14,11 @@ class Image extends Tag
 {
 
   /**
-   * The thumb width
+   * An array of cache salts to use
    *
-   * @var integer
+   * @var array
    */
-  protected $width;
-
-  /**
-   * The thumb height
-   *
-   * @var integer
-   */
-  protected $height;
+  protected $salts = array();
 
   /**
    * Path to the image
@@ -69,11 +62,9 @@ class Image extends Tag
    * @param integer $width
    * @param integer $height
    */
-  public function __construct($image, $width, $height)
+  public function __construct($image)
   {
     $this->image      = $image;
-    $this->width      = $width;
-    $this->height     = $height;
 
     $this->illuminage = App::make('illuminage');
     $this->imagine    = $this->illuminage->bindImagine($this);
@@ -104,23 +95,27 @@ class Image extends Tag
   }
 
   /**
-   * Get the thumb's width
+   * Get the cache hash of the Image
    *
-   * @return integer
+   * @return string
    */
-  public function getWidth()
+  public function getCacheHash()
   {
-    return $this->width;
+    return $this->illuminage->getCache()->getHashOf($this);
   }
 
   /**
-   * Get the thumb's height
+   * Get the Image's salts
    *
-   * @return integer
+   * @param string $salt A particular salt to get, all if null
+   *
+   * @return string|array
    */
-  public function getHeight()
+  public function getSalt($salt = null)
   {
-    return $this->height;
+    if ($salt) return $this->salts[$salt];
+
+    return $this->salts;
   }
 
   /**
@@ -167,6 +162,9 @@ class Image extends Tag
    */
   public function resize($width, $height)
   {
+    $this->salts['width']  = $width;
+    $this->salts['height'] = $height;
+
     $this->imagine->resize(new Box($width, $height));
 
     return $this;
@@ -177,6 +175,7 @@ class Image extends Tag
    */
   public function negative()
   {
+    $this->salts[] = 'negative';
     $this->imagine->effects()->negative();
 
     return $this;
@@ -187,6 +186,7 @@ class Image extends Tag
    */
   public function grayscale()
   {
+    $this->salts[] = 'grayscale';
     $this->imagine->effects()->grayscale();
 
     return $this;
@@ -199,6 +199,7 @@ class Image extends Tag
    */
   public function gamma($gamma = 1)
   {
+    $this->salts['gamma'] = $gamma;
     $this->imagine->effects()->gamma($gamma);
 
     return $this;
@@ -211,6 +212,7 @@ class Image extends Tag
    */
   public function colorize($color)
   {
+    $this->salts['colorize'] = $color;
     $this->imagine->effects()->colorize(new Color($color));
 
     return $this;

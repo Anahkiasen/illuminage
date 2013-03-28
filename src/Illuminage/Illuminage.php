@@ -71,7 +71,7 @@ class Illuminage
     // Crop if Thumb
     if ($image instanceof Thumb) {
       $mode = ImageInterface::THUMBNAIL_OUTBOUND;
-      $box  = new Box($image->getWidth(), $image->getHeight());
+      $box  = new Box($image->getSalt('width'), $image->getSalt('height'));
 
       $imagine = $imagine->thumbnail($box, $mode);
     }
@@ -80,25 +80,25 @@ class Illuminage
   }
 
   /**
-   * Renders the final thumb
+   * Renders the final image
    *
-   * @param Thumb $thumb
+   * @param image $image
    *
    * @return string Path to the generated image
    */
-  public function cacheAndRender(Thumb $thumb)
+  public function cacheAndRender(Image $image)
   {
     // If the image is in cache, return it
-    if ($this->cache->isCached($thumb)) {
-      return $this->getUrlTo($thumb);
+    if ($this->cache->isCached($image)) {
+      return $this->getUrlTo($image);
     }
 
-    // Save the thumb
-    $thumb
+    // Save the image
+    $image
       ->getImagine()
-      ->save($this->cache->getCachePathOf($thumb));
+      ->save($this->cache->getCachePathOf($image));
 
-    return $this->getUrlTo($thumb);
+    return $this->getUrlTo($image);
   }
 
   ////////////////////////////////////////////////////////////////////
@@ -125,15 +125,15 @@ class Illuminage
   /**
    * Get the URL to an image
    *
-   * @param Thumb $thumb
+   * @param image $image
    *
    * @return string
    */
-  protected function getUrlTo(Image $thumb)
+  protected function getUrlTo(Image $image)
   {
     $cache = $this->config->get('illuminage::cache_folder');
 
-    return $this->url->asset($cache.$this->cache->getHashOf($thumb));
+    return $this->url->asset($cache.$this->cache->getHashOf($image));
   }
 
   /**
@@ -144,6 +144,16 @@ class Illuminage
   public function getCacheFolder()
   {
     return App::make('path.public').'/'.$this->config->get('illuminage::cache_folder');
+  }
+
+  /**
+   * Get the Cache instance
+   *
+   * @return Cache
+   */
+  public function getCache()
+  {
+    return $this->cache;
   }
 
 }
