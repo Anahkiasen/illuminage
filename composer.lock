@@ -44,12 +44,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "0b74ad320752e5fb9beb6f52e5ea119f37e3a9b5"
+                "reference": "b6b28eacc1e2197641fb3e6e7aae60cf19244aef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/0b74ad320752e5fb9beb6f52e5ea119f37e3a9b5",
-                "reference": "0b74ad320752e5fb9beb6f52e5ea119f37e3a9b5",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/b6b28eacc1e2197641fb3e6e7aae60cf19244aef",
+                "reference": "b6b28eacc1e2197641fb3e6e7aae60cf19244aef",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "Various utilities and support functions.",
-            "time": "2013-03-26 19:56:26"
+            "time": "2013-03-27 13:00:20"
         },
         {
             "name": "imagine/Imagine",

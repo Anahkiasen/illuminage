@@ -8,6 +8,7 @@ use App;
  */
 class Cache
 {
+
   /**
    * Get the cache hash of an image
    *
@@ -46,4 +47,5 @@ class Cache
   {
     return file_exists($this->getCachePathOf($thumb));
   }
+
 }

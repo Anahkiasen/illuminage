@@ -13,6 +13,7 @@ use Imagine\Image\ImageInterface;
  */
 class Illuminage
 {
+
   /**
    * The UrlGenerator instance
    *
@@ -93,14 +94,15 @@ class Illuminage
     }
 
     // Save the thumb
-    $thumb->getImagine()
+    $thumb
+      ->getImagine()
       ->save($this->cache->getCachePathOf($thumb));
 
     return $this->getUrlTo($thumb);
   }
 
   ////////////////////////////////////////////////////////////////////
-  //////////////////////////////HELPERS //////////////////////////////
+  ////////////////////////////// HELPERS /////////////////////////////
   ////////////////////////////////////////////////////////////////////
 
   /**
@@ -127,7 +129,7 @@ class Illuminage
    *
    * @return string
    */
-  public function getUrlTo(Thumb $thumb)
+  protected function getUrlTo(Image $thumb)
   {
     $cache = $this->config->get('illuminage::cache_folder');
 
@@ -143,4 +145,5 @@ class Illuminage
   {
     return App::make('path.public').'/'.$this->config->get('illuminage::cache_folder');
   }
+
 }

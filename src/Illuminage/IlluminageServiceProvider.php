@@ -5,6 +5,7 @@ use Illuminate\Support\ServiceProvider;
 
 class IlluminageServiceProvider extends ServiceProvider
 {
+
   /**
    * Indicates if loading of the provider is deferred.
    *
@@ -51,4 +52,5 @@ class IlluminageServiceProvider extends ServiceProvider
   {
     return array();
   }
+
 }

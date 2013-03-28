@@ -4,14 +4,15 @@ namespace Illuminage;
 use App;
 use Closure;
 use HtmlObject\Traits\Tag;
-use Imagine\Image\Color;
 use Imagine\Image\Box;
+use Imagine\Image\Color;
 
 /**
  * The thumb of an image
  */
 class Image extends Tag
 {
+
   /**
    * The thumb width
    *
@@ -230,4 +231,5 @@ class Image extends Tag
       'src' => $this->getThumb()
     );
   }
+
 }
