@@ -4,6 +4,6 @@
   'image_engine' => 'Gd',
 
   // The cache folder inside `public`
-  'cache_folder' => 'cache/',
+  'cache_folder' => 'packages/anahkiasen/illuminage/',
 
 );
