@@ -3,37 +3,37 @@ class ImageTest extends IlluminageTests
 {
   public function testCanGetFullPathToImage()
   {
-    $this->assertEquals(__DIR__.'/public/foo.jpg', $this->thumb->getImagePath());
+    $this->assertEquals('tests/public/foo.jpg', $this->thumb->getImagePath());
   }
 
   public function testCanRenderThumb()
   {
-    $this->assertEquals('<img src="http://test/public/' .$this->hash. '">', $this->thumb->render());
+    $this->assertEquals('<img src="http://:/' .$this->hash. '">', $this->thumb->render());
 
     unlink($this->cache->getCachePathOf($this->thumb));
   }
 
   public function testCanRenderThumbOnStringHint()
   {
-    $this->assertEquals('<img src="http://test/public/' .$this->hash. '">', (string) $this->thumb);
+    $this->assertEquals('<img src="http://:/' .$this->hash. '">', $this->thumb->render());
   }
 
   public function testThumbsCorrectlyExtendTag()
   {
     $this->thumb->addClass('foo');
 
-    $this->assertEquals('<img class="foo" src="http://test/public/' .$this->hash. '">', (string) $this->thumb);
+    $this->assertEquals('<img class="foo" src="http://:/' .$this->hash. '">', $this->thumb->render());
   }
 
   public function testCanResizeOnTheFly()
   {
-    $this->assertEquals('http://test/public/9aafd0ab864209781d3af94758cd8935.jpg', $this->image->resize(200, 250)->getThumb());
+    $this->assertEquals('http://:/a8478c716dbf27bf7c401db9b6d75380.jpg', $this->image->resize(200, 250)->getThumb());
   }
 
   public function testCanApplyFilters()
   {
     $image = $this->image->resize(300, 300)->grayscale();
 
-    $this->assertEquals('http://test/public/9edc0916aeae4ae44b64be7058328c0d.jpg', $image->getThumb());
+    $this->assertEquals('http://:/cf0ea92eb1e8bcee543e26f7cc2eb6ff.jpg', $image->getThumb());
   }
 }

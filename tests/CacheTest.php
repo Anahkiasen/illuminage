@@ -22,12 +22,12 @@ class CacheTest extends IlluminageTests
   {
     $thumb = Illuminage::thumb('bar.png', 100, 100);
 
-    $this->assertEquals('d87c9ff7c72ffe49b2f8dec952f4f3b8.png', $this->cache->getHashOf($thumb));
+    $this->assertEquals('6e44b4c173bb53be5821d0e2641985a9.png', $this->cache->getHashOf($thumb));
   }
 
   public function testCanGetPathToCache()
   {
-    $this->assertEquals(__DIR__.'/public/'.$this->hash, $this->cache->getCachePathOf($this->thumb));
+    $this->assertEquals('tests/public/'.$this->hash, $this->cache->getCachePathOf($this->thumb));
   }
 
   public function testCanCheckIfAThumbIsCached()
