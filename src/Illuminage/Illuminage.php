@@ -169,7 +169,7 @@ class Illuminage
   public function thumb($image, $width, $height)
   {
     $image = new Image($this, $image);
-    $image->resize($width, $height);
+    $image->thumbnail($width, $height);
 
     return $image;
   }

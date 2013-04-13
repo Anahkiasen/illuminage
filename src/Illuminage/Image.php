@@ -5,6 +5,7 @@ use Closure;
 use HtmlObject\Traits\Tag;
 use Imagine\Image\Box;
 use Imagine\Image\Color;
+use Imagine\Image\ImageInterface;
 
 /**
  * A basic image
@@ -132,6 +133,22 @@ class Image extends Tag
   {
     $this->salts['resize'] = array(
       new Box($width, $height)
+    );
+
+    return $this;
+  }
+
+  /**
+   * Resize an Image, thumbnail style
+   *
+   * @param integer $width
+   * @param integer $height
+   */
+  public function thumbnail($width, $height)
+  {
+    $this->salts['thumbnail'] = array(
+      new Box($width, $height),
+      ImageInterface::THUMBNAIL_OUTBOUND,
     );
 
     return $this;

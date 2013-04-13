@@ -39,7 +39,7 @@ class ImageProcessor
     // Apply each method one after the other
     foreach ($processors as $method => $arguments) {
       if (empty($arguments) or isset($arguments[0])) {
-        $this->executeMethod($image, $method, $arguments);
+        $image = $this->executeMethod($image, $method, $arguments);
       } else {
         foreach ($arguments as $submethod => $arguments) {
           $this->executeSubmethod($image, $method, $submethod, $arguments);
@@ -69,6 +69,8 @@ class ImageProcessor
         return $imagine->$method()->$submethod();
       case 1:
         return $imagine->$method()->$submethod($arguments[0]);
+      case 2:
+        return $imagine->$method()->$submethod($arguments[0], $arguments[1]);
     }
   }
 
@@ -86,6 +88,8 @@ class ImageProcessor
         return $imagine->$method();
       case 1:
         return $imagine->$method($arguments[0]);
+      case 2:
+        return $imagine->$method($arguments[0], $arguments[1]);
     }
   }
 
