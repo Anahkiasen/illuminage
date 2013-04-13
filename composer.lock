@@ -1,5 +1,9 @@
 {
-    "hash": "44eda3e29b5a5d4decbdc7f9927b89d6",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "4a6a2fcf86fa6aa1e85ff64eaae4a61a",
     "packages": [
         {
             "name": "anahkiasen/html-object",
@@ -38,18 +42,382 @@
             "time": "2013-03-20 16:36:55"
         },
         {
+            "name": "illuminate/cache",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Cache",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/cache.git",
+                "reference": "2101ee7f8622624fb211e6c56d9781d697037a2f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/2101ee7f8622624fb211e6c56d9781d697037a2f",
+                "reference": "2101ee7f8622624fb211e6c56d9781d697037a2f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "4.0.x",
+                "illuminate/encryption": "4.0.x",
+                "illuminate/filesystem": "4.0.x",
+                "illuminate/redis": "4.0.x",
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Cache": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "time": "2013-04-10 12:30:34"
+        },
+        {
+            "name": "illuminate/config",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Config",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/config.git",
+                "reference": "0cb58ac43fe87a1deac67a32926e0d24bebe7238"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/config/zipball/0cb58ac43fe87a1deac67a32926e0d24bebe7238",
+                "reference": "0cb58ac43fe87a1deac67a32926e0d24bebe7238",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "4.0.x",
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Config": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "time": "2013-03-29 21:32:25"
+        },
+        {
+            "name": "illuminate/container",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Container",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/container.git",
+                "reference": "6ef2e3dc5db5e624485afe7adbe3e734a7f93228"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/6ef2e3dc5db5e624485afe7adbe3e734a7f93228",
+                "reference": "6ef2e3dc5db5e624485afe7adbe3e734a7f93228",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Container": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "time": "2013-03-29 21:32:25"
+        },
+        {
+            "name": "illuminate/database",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Database",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/database.git",
+                "reference": "c2edc51e37cfb2acc5346eae142794f0c38cf179"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/c2edc51e37cfb2acc5346eae142794f0c38cf179",
+                "reference": "c2edc51e37cfb2acc5346eae142794f0c38cf179",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "4.0.x",
+                "illuminate/events": "4.0.x",
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "illuminate/console": "4.0.x",
+                "illuminate/filesystem": "4.0.x",
+                "illuminate/pagination": "4.0.x",
+                "illuminate/support": "4.0.x",
+                "mockery/mockery": "0.7.2",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Database": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "An elegant database abstraction library.",
+            "keywords": [
+                "database",
+                "laravel",
+                "orm",
+                "sql"
+            ],
+            "time": "2013-04-11 02:32:30"
+        },
+        {
+            "name": "illuminate/encryption",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Encryption",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/encryption.git",
+                "reference": "1f9cf6e6491c03d8ef35d57af224dfd1004c48ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/encryption/zipball/1f9cf6e6491c03d8ef35d57af224dfd1004c48ff",
+                "reference": "1f9cf6e6491c03d8ef35d57af224dfd1004c48ff",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Encryption": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "A simple wrapper around the mcrypt library.",
+            "time": "2013-04-11 02:19:54"
+        },
+        {
+            "name": "illuminate/events",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Events",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/events.git",
+                "reference": "53bf709301c7912917080c15f78675f80dd5f96a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/53bf709301c7912917080c15f78675f80dd5f96a",
+                "reference": "53bf709301c7912917080c15f78675f80dd5f96a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "4.0.x",
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Events": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "A simple, powerful events system.",
+            "time": "2013-04-07 00:39:12"
+        },
+        {
+            "name": "illuminate/filesystem",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/filesystem.git",
+                "reference": "7ca9a70e0455878b6d39b9b4a33f1a2a934af469"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/7ca9a70e0455878b6d39b9b4a33f1a2a934af469",
+                "reference": "7ca9a70e0455878b6d39b9b4a33f1a2a934af469",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Filesystem": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "A filesystem abstraction library.",
+            "time": "2013-03-29 21:32:25"
+        },
+        {
+            "name": "illuminate/redis",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Redis",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/redis.git",
+                "reference": "ccaca4241b30d50744fc892799c3e3b129548387"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/redis/zipball/ccaca4241b30d50744fc892799c3e3b129548387",
+                "reference": "ccaca4241b30d50744fc892799c3e3b129548387",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0",
+                "predis/predis": "0.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Redis": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2013-04-09 00:44:29"
+        },
+        {
             "name": "illuminate/support",
             "version": "dev-master",
             "target-dir": "Illuminate/Support",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "b6b28eacc1e2197641fb3e6e7aae60cf19244aef"
+                "reference": "cc16ed1445c39846c1c9aaccfc9f1648b28bf3c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/b6b28eacc1e2197641fb3e6e7aae60cf19244aef",
-                "reference": "b6b28eacc1e2197641fb3e6e7aae60cf19244aef",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/cc16ed1445c39846c1c9aaccfc9f1648b28bf3c3",
+                "reference": "cc16ed1445c39846c1c9aaccfc9f1648b28bf3c3",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +425,8 @@
             },
             "require-dev": {
                 "mockery/mockery": "0.7.2",
-                "patchwork/utf8": "1.0.*"
+                "patchwork/utf8": "1.0.*",
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "extra": {
@@ -81,20 +450,20 @@
                 }
             ],
             "description": "Various utilities and support functions.",
-            "time": "2013-03-27 13:00:20"
+            "time": "2013-04-07 00:35:30"
         },
         {
-            "name": "imagine/Imagine",
+            "name": "imagine/imagine",
             "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "990b7bac87b5ac1f47a40e860eef7ca67a6e4396"
+                "reference": "38c704dfac479c01bcb61341e477fe167bcb7958"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/990b7bac87b5ac1f47a40e860eef7ca67a6e4396",
-                "reference": "990b7bac87b5ac1f47a40e860eef7ca67a6e4396",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/38c704dfac479c01bcb61341e477fe167bcb7958",
+                "reference": "38c704dfac479c01bcb61341e477fe167bcb7958",
                 "shasum": ""
             },
             "require": {
@@ -133,7 +502,54 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2013-02-05 00:59:16"
+            "time": "2013-04-11 19:58:00"
+        },
+        {
+            "name": "predis/predis",
+            "version": "0.8.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "d6fa4a32920e340159ecbc9a5cabaa0e192df021"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/d6fa4a32920e340159ecbc9a5cabaa0e192df021",
+                "reference": "d6fa4a32920e340159ecbc9a5cabaa0e192df021",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Predis": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete PHP client library for Redis",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2013-03-30 15:16:13"
         }
     ],
     "packages-dev": [
@@ -143,12 +559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "84b43613e4346d7892ee4375a30614edf1ad36c2"
+                "reference": "cc72f44a00c9abc963e91a796db6166f0c7a7a7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/84b43613e4346d7892ee4375a30614edf1ad36c2",
-                "reference": "84b43613e4346d7892ee4375a30614edf1ad36c2",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/cc72f44a00c9abc963e91a796db6166f0c7a7a7e",
+                "reference": "cc72f44a00c9abc963e91a796db6166f0c7a7a7e",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +604,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2013-03-22 12:04:50"
+            "time": "2013-04-04 17:33:04"
         }
     ],
     "aliases": [
@@ -197,6 +613,9 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "anahkiasen/html-object": 20,
+        "illuminate/cache": 20,
+        "illuminate/container": 20,
+        "illuminate/config": 20,
         "imagine/imagine": 20,
         "mockery/mockery": 20
     },

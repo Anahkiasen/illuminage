@@ -1,13 +1,6 @@
 <?php
 class ImageTest extends IlluminageTests
 {
-  public function testCanAccessSalts()
-  {
-    $this->assertEquals('foo.jpg', $this->thumb->getImage());
-    $this->assertEquals(100, $this->thumb->getSalt('width'));
-    $this->assertEquals(100, $this->thumb->getSalt('height'));
-  }
-
   public function testCanGetFullPathToImage()
   {
     $this->assertEquals(__DIR__.'/public/foo.jpg', $this->thumb->getImagePath());

@@ -1,13 +1,28 @@
 <?php
 namespace Illuminage;
 
-use App;
-
 /**
  * Handles caching and fetching of images
  */
 class Cache
 {
+
+  /**
+   * The Illuminage instance
+   *
+   * @var Illuminage
+   */
+  protected $illuminage;
+
+  /**
+   * Create an Illuminage Cache instance
+   *
+   * @param Illuminage $illuminage
+   */
+  public function __construct(Illuminage $illuminage)
+  {
+    $this->illuminage = $illuminage;
+  }
 
   /**
    * Get the cache hash of an image
@@ -18,19 +33,17 @@ class Cache
    */
   public function getHashOf(Image $image)
   {
+    $imagePath = $image->getImagePath();
 
-    // Implode the salts
-    $filehash = md5_file($image->getImagePath());
-    $filehash = array($filehash);
-    foreach ($image->getSalt() as $name => $salt) {
-      $filehash[] = $name.'-'.$salt;
-    }
+    // Build the salt array
+    $salts   = $image->getSalt();
+    $salts[] = md5_file($imagePath);
+    $salts   = json_encode($salts);
 
-    // Get string hash and extension
-    $filehash  = implode('-', $filehash);
-    $extension = pathinfo($image->getImagePath(), PATHINFO_EXTENSION);
+    // Get image extension
+    $extension = pathinfo($imagePath, PATHINFO_EXTENSION);
 
-    return md5($filehash).'.'.$extension;
+    return md5($salts).'.'.$extension;
   }
 
   /**
@@ -42,7 +55,7 @@ class Cache
    */
   public function getCachePathOf(Image $image)
   {
-    return App::make('illuminage')->getCacheFolder().$this->getHashOf($image);
+    return $this->illuminage->getCacheFolder().$this->getHashOf($image);
   }
 
   /**

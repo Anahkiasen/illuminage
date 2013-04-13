@@ -1,7 +1,7 @@
 <?php
 include '_start.php';
 
-use Illuminage\Thumb;
+use Illuminage\Facades\Illuminage;
 
 class CacheTest extends IlluminageTests
 {
@@ -13,14 +13,14 @@ class CacheTest extends IlluminageTests
 
   public function testSameImageWithDifferentNameGetsSameHash()
   {
-    $thumb = new Thumb('foocopy.jpg', 100, 100);
+    $thumb = Illuminage::thumb('foocopy.jpg', 100, 100);
 
     $this->assertEquals($this->hash, $this->cache->getHashOf($thumb));
   }
 
   public function testCanComputeCorrectExtension()
   {
-    $thumb = new Thumb('bar.png', 100, 100);
+    $thumb = Illuminage::thumb('bar.png', 100, 100);
 
     $this->assertEquals('d87c9ff7c72ffe49b2f8dec952f4f3b8.png', $this->cache->getHashOf($thumb));
   }

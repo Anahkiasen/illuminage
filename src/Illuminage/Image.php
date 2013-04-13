@@ -1,14 +1,13 @@
 <?php
 namespace Illuminage;
 
-use App;
 use Closure;
 use HtmlObject\Traits\Tag;
 use Imagine\Image\Box;
 use Imagine\Image\Color;
 
 /**
- * The thumb of an image
+ * A basic image
  */
 class Image extends Tag
 {
@@ -35,13 +34,6 @@ class Image extends Tag
   protected $illuminage;
 
   /**
-   * The Imagine instance
-   *
-   * @var Imagine
-   */
-  protected $imagine;
-
-  /**
    * The HtmlObject element
    *
    * @var string
@@ -56,18 +48,15 @@ class Image extends Tag
   protected $isSelfClosing = true;
 
   /**
-   * Build a new Thumb
+   * Build a new Image
    *
-   * @param string  $image  Path to the image
-   * @param integer $width
-   * @param integer $height
+   * @param Illuminage $illuminage
+   * @param string     $image       Path to the image
    */
-  public function __construct($image)
+  public function __construct(Illuminage $illuminage, $image)
   {
+    $this->illuminage = $illuminage;
     $this->image      = $image;
-
-    $this->illuminage = App::make('illuminage');
-    $this->imagine    = $this->illuminage->bindImagine($this);
   }
 
   ////////////////////////////////////////////////////////////////////
@@ -91,7 +80,7 @@ class Image extends Tag
    */
   public function getImagePath()
   {
-    return App::make('path.public').'/'.$this->getImage();
+    return $this->illuminage->getPublicFolder().$this->image;
   }
 
   /**
@@ -104,7 +93,6 @@ class Image extends Tag
   public function getSalt($salt = null)
   {
     if ($salt) return $this->salts[$salt];
-
     return $this->salts;
   }
 
@@ -115,17 +103,7 @@ class Image extends Tag
    */
   public function getThumb()
   {
-    return $this->illuminage->cacheAndRender($this);
-  }
-
-  /**
-   * Get the Imagine instance
-   *
-   * @return Imagine
-   */
-  public function getImagine()
-  {
-    return $this->imagine;
+    return $this->illuminage->process($this);
   }
 
   ////////////////////////////////////////////////////////////////////
@@ -137,7 +115,7 @@ class Image extends Tag
    *
    * @param Closure $closure
    */
-  public function onImage(Closure $closure)
+  private function onImage(Closure $closure)
   {
     $closure($this->imagine);
 
@@ -152,10 +130,9 @@ class Image extends Tag
    */
   public function resize($width, $height)
   {
-    $this->salts['width']  = $width;
-    $this->salts['height'] = $height;
-
-    $this->imagine->resize(new Box($width, $height));
+    $this->salts['resize'] = array(
+      new Box($width, $height)
+    );
 
     return $this;
   }
@@ -165,8 +142,7 @@ class Image extends Tag
    */
   public function negative()
   {
-    $this->salts[] = 'negative';
-    $this->imagine->effects()->negative();
+    $this->salts['effects']['negative'] = array();
 
     return $this;
   }
@@ -176,8 +152,7 @@ class Image extends Tag
    */
   public function grayscale()
   {
-    $this->salts[] = 'grayscale';
-    $this->imagine->effects()->grayscale();
+    $this->salts['effects']['grayscale'] = array();
 
     return $this;
   }
@@ -189,8 +164,7 @@ class Image extends Tag
    */
   public function gamma($gamma = 1)
   {
-    $this->salts['gamma'] = $gamma;
-    $this->imagine->effects()->gamma($gamma);
+    $this->salts['effects']['gamma'] = $gamma;
 
     return $this;
   }
@@ -202,8 +176,7 @@ class Image extends Tag
    */
   public function colorize($color)
   {
-    $this->salts['colorize'] = $color;
-    $this->imagine->effects()->colorize(new Color($color));
+    $this->salts['effects']['colorize'] = new Color($color);
 
     return $this;
   }

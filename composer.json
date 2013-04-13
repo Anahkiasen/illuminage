@@ -16,8 +16,11 @@
   ],
   "require": {
     "php": ">=5.3.0",
-    "illuminate/support": "4.0.x",
     "anahkiasen/html-object": "dev-master",
+    "illuminate/cache": "dev-master",
+    "illuminate/container": "dev-master",
+    "illuminate/config": "dev-master",
+    "illuminate/support": "4.0.x",
     "imagine/Imagine": "dev-develop"
   },
   "require-dev": {
