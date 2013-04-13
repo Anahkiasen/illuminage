@@ -9,8 +9,6 @@ use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
 use Illuminate\Http\Request;
 use Illuminate\Routing\UrlGenerator;
-use Imagine\Image\Box;
-use Imagine\Image\ImageInterface;
 use Symfony\Component\Routing\RouteCollection;
 
 /**
