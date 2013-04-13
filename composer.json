@@ -20,6 +20,7 @@
     "illuminate/cache": "dev-master",
     "illuminate/container": "dev-master",
     "illuminate/config": "dev-master",
+    "illuminate/routing": "dev-master",
     "illuminate/support": "4.0.x",
     "imagine/Imagine": "dev-develop"
   },

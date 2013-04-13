@@ -7,10 +7,11 @@ use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
+use Illuminate\Http\Request;
 use Illuminate\Routing\UrlGenerator;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\RouteCollection;
 
 /**
  * Handles image creation and caching
@@ -109,7 +110,7 @@ class Illuminage
     });
 
     $app->bind('url', function($app) {
-      $routeCollection = new Symfony\Component\Routing\RouteCollection;
+      $routeCollection = new RouteCollection;
 
       return new UrlGenerator($routeCollection, $app['request']);
     });
