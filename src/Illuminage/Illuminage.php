@@ -225,6 +225,13 @@ class Illuminage
    */
   protected function getUrlTo(Image $image)
   {
+    if (isset($this->app['url'])) {
+      return $this->app['url']->asset(
+        $this->getOption('cache_folder').
+        $this->cache->getHashOf($image)
+      );
+    }
+
     return
       $this->getPublicFolder().
       $this->getOption('cache_folder').

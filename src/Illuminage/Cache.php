@@ -38,7 +38,7 @@ class Cache
     // Build the salt array
     $salts   = $image->getSalt();
     $salts[] = md5_file($imagePath);
-    $salts   = json_encode($salts);
+    $salts   = serialize($salts);
 
     // Get image extension
     $extension = pathinfo($imagePath, PATHINFO_EXTENSION);
