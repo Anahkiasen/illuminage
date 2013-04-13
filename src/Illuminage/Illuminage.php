@@ -1,7 +1,6 @@
 <?php
 namespace Illuminage;
 
-use App;
 use Exception;
 use Illuminate\Cache\FileStore;
 use Illuminate\Config\FileLoader;
@@ -11,6 +10,7 @@ use Illuminate\Container\Container;
 use Illuminate\Routing\UrlGenerator;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Handles image creation and caching
@@ -87,6 +87,10 @@ class Illuminage
       return new FileLoader($app['Filesystem'], __DIR__.'/../../');
     });
 
+    $app->bindIf('request', function() {
+      return Request::createFromGlobals();
+    });
+
     // Core classes ------------------------------------------------ /
 
     $app->bindIf('config', function($app) {
@@ -102,6 +106,12 @@ class Illuminage
       $imagine = "\Imagine\\$engine\Imagine";
 
       return new $imagine;
+    });
+
+    $app->bind('url', function($app) {
+      $routeCollection = new Symfony\Component\Routing\RouteCollection;
+
+      return new UrlGenerator($routeCollection, $app['request']);
     });
 
     // Illuminage classes ------------------------------------------ /
@@ -225,17 +235,9 @@ class Illuminage
    */
   protected function getUrlTo(Image $image)
   {
-    if (isset($this->app['url'])) {
-      return $this->app['url']->asset(
-        $this->getOption('cache_folder').
-        $this->cache->getHashOf($image)
-      );
-    }
-
-    return
-      $this->getPublicFolder().
+    return $this->app['url']->asset(
       $this->getOption('cache_folder').
-      $this->cache->getHashOf($image);
+      $this->cache->getHashOf($image));
   }
 
   /**
