@@ -107,7 +107,7 @@ class Illuminage
       return new $imagine;
     });
 
-    $app->bind('url', function($app) {
+    $app->bindIf('url', function($app) {
       $routeCollection = new RouteCollection;
 
       return new UrlGenerator($routeCollection, $app['request']);
