@@ -4,7 +4,7 @@ use Illuminage\Facades\Illuminage;
 
 abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 {
-  protected $hash = 'dc50c59ee39b2e0d7aebb6799834b90c.jpg';
+  protected $hash = '6ee1a0518936bc00ce5f788c48209f5e.jpg';
   protected static $app;
 
   public static function setUpBeforeClass()
