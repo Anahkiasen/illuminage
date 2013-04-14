@@ -87,13 +87,10 @@ class Image extends Tag
   /**
    * Get the Image's salts
    *
-   * @param string $salt A particular salt to get, all if null
-   *
    * @return string|array
    */
-  public function getSalt($salt = null)
+  public function getSalts()
   {
-    if ($salt) return $this->salts[$salt];
     return $this->salts;
   }
 

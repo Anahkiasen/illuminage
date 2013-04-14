@@ -187,19 +187,12 @@ class Illuminage
    */
   public function process(Image $image)
   {
-    // If the image is in cache, return it
-    if ($this->cache->isCached($image)) {
-      return $this->getUrlTo($image);
+    // If the image hasn't yet been processed, do it
+    // and then cache it
+    if (!$this->cache->isCached($image)) {
+      $processedImage = $this->app['illuminage.processor']->process($image);
+      $processedImage->save($this->cache->getCachePathOf($image));
     }
-
-    // Apply the various processors to the Image
-    $processedImage = $this->app['illuminage.processor']->process(
-      $this->getPathOf($image),
-      $image->getSalt()
-    );
-
-    // Save the final processed image
-    $processedImage->save($this->cache->getCachePathOf($image));
 
     return $this->getUrlTo($image);
   }
@@ -207,23 +200,6 @@ class Illuminage
   ////////////////////////////////////////////////////////////////////
   ////////////////////////////// HELPERS /////////////////////////////
   ////////////////////////////////////////////////////////////////////
-
-  /**
-   * Get the path of an image
-   *
-   * @param Image $image
-   *
-   * @return string
-   */
-  protected function getPathOf(Image $image)
-  {
-    $path = $image->getImagePath();
-    if (!file_exists($path)) {
-      throw new Exception('The image '.$path. ' does not exist');
-    }
-
-    return $path;
-  }
 
   /**
    * Get the URL to an image

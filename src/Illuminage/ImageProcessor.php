@@ -27,14 +27,14 @@ class ImageProcessor
   /**
    * Process an Image
    *
-   * @param string $image      Path to the image
-   * @param array  $processors An array of processors
+   * @param Image $image
    *
    * @return ImagineInterface
    */
-  public function process($image, array $processors)
+  public function process(Image $image)
   {
-    $image = $this->imagine->open($image);
+    $processors = $image->getSalts();
+    $image      = $this->imagine->open($image->getImagePath());
 
     // Apply each method one after the other
     foreach ($processors as $method => $arguments) {
