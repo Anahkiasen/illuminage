@@ -17,10 +17,10 @@
   "require": {
     "php": ">=5.3.0",
     "anahkiasen/html-object": "dev-master",
-    "illuminate/cache": "dev-master",
-    "illuminate/container": "dev-master",
-    "illuminate/config": "dev-master",
-    "illuminate/routing": "dev-master",
+    "illuminate/cache": "4.0.x",
+    "illuminate/container": "4.0.x",
+    "illuminate/config": "4.0.x",
+    "illuminate/routing": "4.0.x",
     "illuminate/support": "4.0.x",
     "imagine/Imagine": "dev-develop"
   },
