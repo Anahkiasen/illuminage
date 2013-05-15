@@ -92,7 +92,7 @@ class Illuminage
 
     // Core classes ------------------------------------------------ /
 
-    $app->bindIf('config', function($app) {
+    if (!$app->bound('config')) $app->bindIf('config', function($app) {
       return new Repository($app['FileLoader'], 'src/config');
     });
 

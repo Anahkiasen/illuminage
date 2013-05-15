@@ -48,12 +48,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
-                "reference": "475bd0bdd43fc85cc127a2c150dab23931c3d1fd"
+                "reference": "7f2993115535fc4d340280e29b5b2966524cd6f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/cache/zipball/475bd0bdd43fc85cc127a2c150dab23931c3d1fd",
-                "reference": "475bd0bdd43fc85cc127a2c150dab23931c3d1fd",
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/7f2993115535fc4d340280e29b5b2966524cd6f7",
+                "reference": "7f2993115535fc4d340280e29b5b2966524cd6f7",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-04-30 03:03:08"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/config",
@@ -94,12 +94,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
-                "reference": "3dc73d0c88b7cfc1c5b3c938eca4402685c5c253"
+                "reference": "5a6adfb3c22abfeca627f2cac4e4b752ad23602b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/config/zipball/3dc73d0c88b7cfc1c5b3c938eca4402685c5c253",
-                "reference": "3dc73d0c88b7cfc1c5b3c938eca4402685c5c253",
+                "url": "https://api.github.com/repos/illuminate/config/zipball/5a6adfb3c22abfeca627f2cac4e4b752ad23602b",
+                "reference": "5a6adfb3c22abfeca627f2cac4e4b752ad23602b",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-04-28 18:44:42"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/container",
@@ -137,12 +137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "7d2c43ad8818338e75540bfbf30066cf25513280"
+                "reference": "b38759fec73093af30e23109bc48aebb550474ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/7d2c43ad8818338e75540bfbf30066cf25513280",
-                "reference": "7d2c43ad8818338e75540bfbf30066cf25513280",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/b38759fec73093af30e23109bc48aebb550474ea",
+                "reference": "b38759fec73093af30e23109bc48aebb550474ea",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +169,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-04-19 13:49:09"
+            "time": "2013-05-14 13:25:18"
         },
         {
             "name": "illuminate/cookie",
@@ -178,12 +178,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cookie.git",
-                "reference": "068ebd2c05952fedc922c915271db239ba143569"
+                "reference": "56ac43d22dfd849e389d35cb34422a718c582536"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/cookie/zipball/068ebd2c05952fedc922c915271db239ba143569",
-                "reference": "068ebd2c05952fedc922c915271db239ba143569",
+                "url": "https://api.github.com/repos/illuminate/cookie/zipball/56ac43d22dfd849e389d35cb34422a718c582536",
+                "reference": "56ac43d22dfd849e389d35cb34422a718c582536",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +215,7 @@
                 }
             ],
             "description": "A cookie creation utility.",
-            "time": "2013-04-28 18:44:42"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/database",
@@ -224,12 +224,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "6b096ffbdd668adf1de8756c063dfc7232d79963"
+                "reference": "61d9881a51ef1831a0e4a6c4e58324ddd9a91f01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/6b096ffbdd668adf1de8756c063dfc7232d79963",
-                "reference": "6b096ffbdd668adf1de8756c063dfc7232d79963",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/61d9881a51ef1831a0e4a6c4e58324ddd9a91f01",
+                "reference": "61d9881a51ef1831a0e4a6c4e58324ddd9a91f01",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +272,7 @@
                 "orm",
                 "sql"
             ],
-            "time": "2013-04-29 21:41:26"
+            "time": "2013-05-15 00:43:24"
         },
         {
             "name": "illuminate/encryption",
@@ -281,12 +281,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/encryption.git",
-                "reference": "e00fed9f387ed2e07a1de4108f50fd23feae0955"
+                "reference": "cb7b184724efc469a7a704b36109cd1ee18e170a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/encryption/zipball/e00fed9f387ed2e07a1de4108f50fd23feae0955",
-                "reference": "e00fed9f387ed2e07a1de4108f50fd23feae0955",
+                "url": "https://api.github.com/repos/illuminate/encryption/zipball/cb7b184724efc469a7a704b36109cd1ee18e170a",
+                "reference": "cb7b184724efc469a7a704b36109cd1ee18e170a",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
                 }
             ],
             "description": "A simple wrapper around the mcrypt library.",
-            "time": "2013-04-20 04:52:17"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/events",
@@ -324,12 +324,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
-                "reference": "53bf709301c7912917080c15f78675f80dd5f96a"
+                "reference": "9f74cad5078534b5e968bca3a1158332caa0f7d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/53bf709301c7912917080c15f78675f80dd5f96a",
-                "reference": "53bf709301c7912917080c15f78675f80dd5f96a",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/9f74cad5078534b5e968bca3a1158332caa0f7d9",
+                "reference": "9f74cad5078534b5e968bca3a1158332caa0f7d9",
                 "shasum": ""
             },
             "require": {
@@ -360,7 +360,7 @@
                 }
             ],
             "description": "A simple, powerful events system.",
-            "time": "2013-04-07 00:39:12"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/filesystem",
@@ -369,17 +369,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "989f4e643493333939d5f8c0b276d4ed45167a36"
+                "reference": "e50c3dbcf92a36030f79f77c962c63e2c71987d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/989f4e643493333939d5f8c0b276d4ed45167a36",
-                "reference": "989f4e643493333939d5f8c0b276d4ed45167a36",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/e50c3dbcf92a36030f79f77c962c63e2c71987d3",
+                "reference": "e50c3dbcf92a36030f79f77c962c63e2c71987d3",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "4.0.x",
-                "php": ">=5.3.0"
+                "php": ">=5.3.0",
+                "symfony/finder": "2.3.x"
             },
             "require-dev": {
                 "phpunit/phpunit": "3.7.*"
@@ -403,7 +404,7 @@
                 }
             ],
             "description": "A filesystem abstraction library.",
-            "time": "2013-04-24 12:51:34"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/http",
@@ -412,12 +413,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
-                "reference": "8256b3f6821628c47ce612cc5d418f7c0a3b4d4c"
+                "reference": "d0d33ea8acaee6c671a41edce5512f1a830c2adb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/http/zipball/8256b3f6821628c47ce612cc5d418f7c0a3b4d4c",
-                "reference": "8256b3f6821628c47ce612cc5d418f7c0a3b4d4c",
+                "url": "https://api.github.com/repos/illuminate/http/zipball/d0d33ea8acaee6c671a41edce5512f1a830c2adb",
+                "reference": "d0d33ea8acaee6c671a41edce5512f1a830c2adb",
                 "shasum": ""
             },
             "require": {
@@ -450,7 +451,7 @@
             "keywords": [
                 "laravel"
             ],
-            "time": "2013-04-28 18:44:42"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/redis",
@@ -459,12 +460,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/redis.git",
-                "reference": "ccaca4241b30d50744fc892799c3e3b129548387"
+                "reference": "5eddd025acbaeab98a18276dda7cf5ac061e83c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/redis/zipball/ccaca4241b30d50744fc892799c3e3b129548387",
-                "reference": "ccaca4241b30d50744fc892799c3e3b129548387",
+                "url": "https://api.github.com/repos/illuminate/redis/zipball/5eddd025acbaeab98a18276dda7cf5ac061e83c6",
+                "reference": "5eddd025acbaeab98a18276dda7cf5ac061e83c6",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +498,7 @@
             "keywords": [
                 "laravel"
             ],
-            "time": "2013-04-09 00:44:29"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/routing",
@@ -506,12 +507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/routing.git",
-                "reference": "e65d682d790ecbdb8b88e7f5e6eeb89ea42b5993"
+                "reference": "df427922a90682852eb67bb9c4b48294209de684"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/routing/zipball/e65d682d790ecbdb8b88e7f5e6eeb89ea42b5993",
-                "reference": "e65d682d790ecbdb8b88e7f5e6eeb89ea42b5993",
+                "url": "https://api.github.com/repos/illuminate/routing/zipball/df427922a90682852eb67bb9c4b48294209de684",
+                "reference": "df427922a90682852eb67bb9c4b48294209de684",
                 "shasum": ""
             },
             "require": {
@@ -551,7 +552,7 @@
             "keywords": [
                 "laravel"
             ],
-            "time": "2013-04-29 21:21:16"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/session",
@@ -560,12 +561,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
-                "reference": "942466de070a54b9936ca23c94e4b25a4ffc8db7"
+                "reference": "fb9c5c37a6114d962a4b0391975a47082d2650ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/session/zipball/942466de070a54b9936ca23c94e4b25a4ffc8db7",
-                "reference": "942466de070a54b9936ca23c94e4b25a4ffc8db7",
+                "url": "https://api.github.com/repos/illuminate/session/zipball/fb9c5c37a6114d962a4b0391975a47082d2650ef",
+                "reference": "fb9c5c37a6114d962a4b0391975a47082d2650ef",
                 "shasum": ""
             },
             "require": {
@@ -600,7 +601,7 @@
                 }
             ],
             "description": "A tidy, simple session library.",
-            "time": "2013-04-29 19:54:55"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "illuminate/support",
@@ -609,12 +610,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "aa70128a0864ed434f93f7ebf9d3a9f0c08e0dad"
+                "reference": "ef3f48e6c9bc5408315e5fff344ca61e901aebb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/aa70128a0864ed434f93f7ebf9d3a9f0c08e0dad",
-                "reference": "aa70128a0864ed434f93f7ebf9d3a9f0c08e0dad",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/ef3f48e6c9bc5408315e5fff344ca61e901aebb5",
+                "reference": "ef3f48e6c9bc5408315e5fff344ca61e901aebb5",
                 "shasum": ""
             },
             "require": {
@@ -647,7 +648,7 @@
                 }
             ],
             "description": "Various utilities and support functions.",
-            "time": "2013-04-30 03:14:56"
+            "time": "2013-05-14 04:26:13"
         },
         {
             "name": "imagine/imagine",
@@ -836,12 +837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "cc615424a19193d1c96886cc0d4ff6125eac7cde"
+                "reference": "6360ed4ed54eb4c80e6640c23140507dea6e98f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/cc615424a19193d1c96886cc0d4ff6125eac7cde",
-                "reference": "cc615424a19193d1c96886cc0d4ff6125eac7cde",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/6360ed4ed54eb4c80e6640c23140507dea6e98f3",
+                "reference": "6360ed4ed54eb4c80e6640c23140507dea6e98f3",
                 "shasum": ""
             },
             "require": {
@@ -852,9 +853,9 @@
                 "symfony/http-kernel": ">=2.1,<3.0"
             },
             "suggest": {
-                "symfony/class-loader": "~2.1",
-                "symfony/http-foundation": "~2.1",
-                "symfony/http-kernel": "~2.1"
+                "symfony/class-loader": "",
+                "symfony/http-foundation": "",
+                "symfony/http-kernel": ""
             },
             "type": "library",
             "extra": {
@@ -883,7 +884,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-07 20:25:23"
+            "time": "2013-05-13 14:36:40"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -892,12 +893,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "2e1fce7bb3ea06d9e42756f1dd3edf966420c755"
+                "reference": "2d84c66c090ed676f9ac60a46b9366d4dd80a523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/2e1fce7bb3ea06d9e42756f1dd3edf966420c755",
-                "reference": "2e1fce7bb3ea06d9e42756f1dd3edf966420c755",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/2d84c66c090ed676f9ac60a46b9366d4dd80a523",
+                "reference": "2d84c66c090ed676f9ac60a46b9366d4dd80a523",
                 "shasum": ""
             },
             "require": {
@@ -907,8 +908,8 @@
                 "symfony/dependency-injection": ">=2.0,<3.0"
             },
             "suggest": {
-                "symfony/dependency-injection": "2.2.*",
-                "symfony/http-kernel": "2.2.*"
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
             },
             "type": "library",
             "extra": {
@@ -937,7 +938,54 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2013-02-11 11:27:01"
+            "time": "2013-05-13 14:36:40"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "v2.3.0-BETA2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/v2.3.0-BETA2",
+                "reference": "v2.3.0-BETA2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-04-25 12:12:10"
         },
         {
             "name": "symfony/http-foundation",
@@ -946,12 +994,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "bb9fc05bac6d6248f53dbc42396fe4b8d92d7e5b"
+                "reference": "v2.3.0-BETA2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/bb9fc05bac6d6248f53dbc42396fe4b8d92d7e5b",
-                "reference": "bb9fc05bac6d6248f53dbc42396fe4b8d92d7e5b",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/v2.3.0-BETA2",
+                "reference": "v2.3.0-BETA2",
                 "shasum": ""
             },
             "require": {
@@ -987,7 +1035,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-25 12:33:17"
+            "time": "2013-05-10 06:00:03"
         },
         {
             "name": "symfony/http-kernel",
@@ -996,12 +1044,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "9517776f77e5488655838516fe6187fe8e1734c1"
+                "reference": "6c5490b05ca47ebe7c43af369b679eb1ce0a9639"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/9517776f77e5488655838516fe6187fe8e1734c1",
-                "reference": "9517776f77e5488655838516fe6187fe8e1734c1",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/6c5490b05ca47ebe7c43af369b679eb1ce0a9639",
+                "reference": "6c5490b05ca47ebe7c43af369b679eb1ce0a9639",
                 "shasum": ""
             },
             "require": {
@@ -1009,7 +1057,7 @@
                 "psr/log": ">=1.0,<2.0",
                 "symfony/debug": ">=2.3,<3.0",
                 "symfony/event-dispatcher": ">=2.1,<3.0",
-                "symfony/http-foundation": ">=2.2,<2.4-dev"
+                "symfony/http-foundation": ">=2.2,<3.0"
             },
             "require-dev": {
                 "symfony/browser-kit": "2.2.*",
@@ -1019,16 +1067,16 @@
                 "symfony/dependency-injection": ">=2.0,<3.0",
                 "symfony/finder": ">=2.0,<3.0",
                 "symfony/process": ">=2.0,<3.0",
-                "symfony/routing": ">=2.2,<2.4-dev",
-                "symfony/stopwatch": ">=2.2,<2.4-dev"
+                "symfony/routing": ">=2.2,<3.0",
+                "symfony/stopwatch": ">=2.2,<3.0"
             },
             "suggest": {
-                "symfony/browser-kit": "2.2.*",
-                "symfony/class-loader": "2.2.*",
-                "symfony/config": "2.2.*",
-                "symfony/console": "2.2.*",
-                "symfony/dependency-injection": "2.2.*",
-                "symfony/finder": "2.2.*"
+                "symfony/browser-kit": "",
+                "symfony/class-loader": "",
+                "symfony/config": "",
+                "symfony/console": "",
+                "symfony/dependency-injection": "",
+                "symfony/finder": ""
             },
             "type": "library",
             "extra": {
@@ -1057,7 +1105,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-30 07:25:51"
+            "time": "2013-05-13 14:36:40"
         },
         {
             "name": "symfony/routing",
@@ -1066,12 +1114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "b05719c698602b3201ba034a133f28b480018118"
+                "reference": "29bc6ba702bc2e425480161177fedf4bb0329f0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/b05719c698602b3201ba034a133f28b480018118",
-                "reference": "b05719c698602b3201ba034a133f28b480018118",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/29bc6ba702bc2e425480161177fedf4bb0329f0f",
+                "reference": "29bc6ba702bc2e425480161177fedf4bb0329f0f",
                 "shasum": ""
             },
             "require": {
@@ -1080,13 +1128,13 @@
             "require-dev": {
                 "doctrine/common": ">=2.2,<3.0",
                 "psr/log": ">=1.0,<2.0",
-                "symfony/config": ">=2.2,<2.4-dev",
+                "symfony/config": ">=2.2,<3.0",
                 "symfony/yaml": ">=2.0,<3.0"
             },
             "suggest": {
-                "doctrine/common": "~2.2",
-                "symfony/config": "2.2.*",
-                "symfony/yaml": "2.2.*"
+                "doctrine/common": "",
+                "symfony/config": "",
+                "symfony/yaml": ""
             },
             "type": "library",
             "extra": {
@@ -1115,7 +1163,7 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-26 09:39:57"
+            "time": "2013-05-13 14:36:40"
         }
     ],
     "packages-dev": [
@@ -1125,15 +1173,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "3bd6f1712642838b4c0524d3a47359940df72e80"
+                "reference": "422e6dc81ef12e4714248a06bca6dd382f3b38dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/3bd6f1712642838b4c0524d3a47359940df72e80",
-                "reference": "3bd6f1712642838b4c0524d3a47359940df72e80",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/422e6dc81ef12e4714248a06bca6dd382f3b38dd",
+                "reference": "422e6dc81ef12e4714248a06bca6dd382f3b38dd",
                 "shasum": ""
             },
             "require": {
+                "lib-pcre": ">=7.0",
                 "php": ">=5.3.2"
             },
             "require-dev": {
@@ -1170,7 +1219,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2013-04-29 23:44:28"
+            "time": "2013-05-13 12:56:51"
         }
     ],
     "aliases": [
