@@ -4,6 +4,7 @@ namespace Illuminage;
 use Closure;
 use HtmlObject\Traits\Tag;
 use Imagine\Image\Box;
+use Imagine\Image\Point;
 use Imagine\Image\Color;
 use Imagine\Image\ImageInterface;
 
@@ -60,6 +61,23 @@ class Image extends Tag
     $this->image      = $image;
   }
 
+  /**
+   * Delegate methods to the Imagine instance
+   *
+   * @param  string $method
+   * @param  array $arguments
+   *
+   * @return Image
+   */
+  public function __call($method, $arguments)
+  {
+    if (method_exists('Imagine\Gd\Image', $method)) {
+      $this->salts[$method] = $arguments;
+    }
+
+    return parent::__call($method, $arguments);
+  }
+
   ////////////////////////////////////////////////////////////////////
   ////////////////////////// PUBLIC METHODS //////////////////////////
   ////////////////////////////////////////////////////////////////////
@@ -72,6 +90,18 @@ class Image extends Tag
   public function getImage()
   {
     return $this->image;
+  }
+
+  /**
+   * Get the original size of the image
+   *
+   * @return Box
+   */
+  public function getOriginalSize()
+  {
+    $size = getimagesize($this->image);
+
+    return new Box($size[0], $size[1]);
   }
 
   /**
@@ -143,9 +173,23 @@ class Image extends Tag
    */
   public function thumbnail($width, $height)
   {
-    $this->salts['thumbnail'] = array(
-      new Box($width, $height),
-      ImageInterface::THUMBNAIL_OUTBOUND,
+    // Compute thumbnail ratio
+    if     ($this->getOriginalSize()->getWidth()  < $width)  $ratio = $width  / $this->getOriginalSize()->getWidth();
+    elseif ($this->getOriginalSize()->getHeight() < $height) $ratio = $height / $this->getOriginalSize()->getHeight();
+    else   $ratio = 1;
+
+    // Resize image to fit bounds
+    $resize = new Box($this->getOriginalSize()->getWidth(), $this->getOriginalSize()->getHeight());
+    $resize->scale($ratio);
+    $this->salts['resize'] = array($resize);
+
+    // Crop image
+    $this->salts['crop'] = array(
+      new Point(
+        max(0, round(($this->getOriginalSize()->getWidth()  - $width)  / 2)),
+        max(0, round(($this->getOriginalSize()->getHeight() - $height) / 2))
+      ),
+      new Box($width, $height)
     );
 
     return $this;
