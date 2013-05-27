@@ -99,7 +99,7 @@ class Image extends Tag
    */
   public function getOriginalSize()
   {
-    $size = getimagesize($this->image);
+    $size = getimagesize($this->getImagePath());
 
     return new Box($size[0], $size[1]);
   }
