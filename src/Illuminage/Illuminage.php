@@ -174,6 +174,19 @@ class Illuminage
     return $image;
   }
 
+  /**
+   * Create a thumb image
+   *
+   * @param  string $image
+   * @param  integer $size
+   *
+   * @return Image
+   */
+  public function square($image, $size)
+  {
+    return $this->thumb($image, $size, $size);
+  }
+
   ////////////////////////////////////////////////////////////////////
   /////////////////////////// IMAGE PROCESSING ///////////////////////
   ////////////////////////////////////////////////////////////////////
