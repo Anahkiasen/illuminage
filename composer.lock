@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5dec1dc5317a414649ec78ee2795a237",
+    "hash": "f3de20171c18b6f685267169807aad1e",
     "packages": [
         {
             "name": "anahkiasen/html-object",
@@ -48,20 +48,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
-                "reference": "62c39956a193e4210ef005be87c1102e5aea2dfc"
+                "reference": "43cc7e73fa7209f97ae3ca8ce2e2de7b97feb024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/cache/zipball/62c39956a193e4210ef005be87c1102e5aea2dfc",
-                "reference": "62c39956a193e4210ef005be87c1102e5aea2dfc",
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/43cc7e73fa7209f97ae3ca8ce2e2de7b97feb024",
+                "reference": "43cc7e73fa7209f97ae3ca8ce2e2de7b97feb024",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "4.0.x",
-                "illuminate/encryption": "4.0.x",
-                "illuminate/filesystem": "4.0.x",
-                "illuminate/redis": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/database": "4.1.x",
+                "illuminate/encryption": "4.1.x",
+                "illuminate/filesystem": "4.1.x",
+                "illuminate/redis": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -70,7 +70,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -79,13 +79,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-05-18 01:16:41"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/config",
@@ -94,17 +97,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
-                "reference": "5a6adfb3c22abfeca627f2cac4e4b752ad23602b"
+                "reference": "5c943c06e817be915d2eb45f9b34fdd6b38bc44c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/config/zipball/5a6adfb3c22abfeca627f2cac4e4b752ad23602b",
-                "reference": "5a6adfb3c22abfeca627f2cac4e4b752ad23602b",
+                "url": "https://api.github.com/repos/illuminate/config/zipball/5c943c06e817be915d2eb45f9b34fdd6b38bc44c",
+                "reference": "5c943c06e817be915d2eb45f9b34fdd6b38bc44c",
                 "shasum": ""
             },
             "require": {
-                "illuminate/filesystem": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/filesystem": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -113,7 +116,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -122,13 +125,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-05-14 04:26:13"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/container",
@@ -137,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "fd37b630fb7f3a62ff37c34d861363b0a1337f36"
+                "reference": "908a2e4ac315c58317b2197c3f057e94bcbf869a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/fd37b630fb7f3a62ff37c34d861363b0a1337f36",
-                "reference": "fd37b630fb7f3a62ff37c34d861363b0a1337f36",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/908a2e4ac315c58317b2197c3f057e94bcbf869a",
+                "reference": "908a2e4ac315c58317b2197c3f057e94bcbf869a",
                 "shasum": ""
             },
             "require": {
@@ -154,7 +160,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -163,13 +169,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-05-15 20:38:42"
+            "time": "2013-05-28 18:31:39"
         },
         {
             "name": "illuminate/cookie",
@@ -178,17 +187,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cookie.git",
-                "reference": "56ac43d22dfd849e389d35cb34422a718c582536"
+                "reference": "bffad04a1b06be3f4652fe257f7f010e43810c2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/cookie/zipball/56ac43d22dfd849e389d35cb34422a718c582536",
-                "reference": "56ac43d22dfd849e389d35cb34422a718c582536",
+                "url": "https://api.github.com/repos/illuminate/cookie/zipball/bffad04a1b06be3f4652fe257f7f010e43810c2f",
+                "reference": "bffad04a1b06be3f4652fe257f7f010e43810c2f",
                 "shasum": ""
             },
             "require": {
-                "illuminate/encryption": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/encryption": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0",
                 "symfony/http-foundation": "2.3.*"
             },
@@ -199,7 +208,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -208,14 +217,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "A cookie creation utility.",
-            "time": "2013-05-14 04:26:13"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/database",
@@ -224,34 +235,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "00553666aacae926e88406f46372b52c6f2584c3"
+                "reference": "839bfa48946def4e9678c51ef8429bb287288b0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/00553666aacae926e88406f46372b52c6f2584c3",
-                "reference": "00553666aacae926e88406f46372b52c6f2584c3",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/839bfa48946def4e9678c51ef8429bb287288b0f",
+                "reference": "839bfa48946def4e9678c51ef8429bb287288b0f",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "4.0.x",
-                "illuminate/events": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/container": "4.1.x",
+                "illuminate/events": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "nesbot/carbon": "1.*",
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "illuminate/cache": "4.0.x",
-                "illuminate/console": "4.0.x",
-                "illuminate/filesystem": "4.0.x",
-                "illuminate/pagination": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/cache": "4.1.x",
+                "illuminate/console": "4.1.x",
+                "illuminate/filesystem": "4.1.x",
+                "illuminate/pagination": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "mockery/mockery": "0.7.2",
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -260,20 +271,22 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "An elegant database abstraction library.",
             "keywords": [
                 "database",
                 "laravel",
                 "orm",
                 "sql"
             ],
-            "time": "2013-05-25 12:59:37"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/encryption",
@@ -282,16 +295,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/encryption.git",
-                "reference": "cb7b184724efc469a7a704b36109cd1ee18e170a"
+                "reference": "1f9689061944b222c6b4421e65ea66d298847555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/encryption/zipball/cb7b184724efc469a7a704b36109cd1ee18e170a",
-                "reference": "cb7b184724efc469a7a704b36109cd1ee18e170a",
+                "url": "https://api.github.com/repos/illuminate/encryption/zipball/1f9689061944b222c6b4421e65ea66d298847555",
+                "reference": "1f9689061944b222c6b4421e65ea66d298847555",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "4.0.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -300,7 +313,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -309,14 +322,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "A simple wrapper around the mcrypt library.",
-            "time": "2013-05-14 04:26:13"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/events",
@@ -325,17 +340,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
-                "reference": "f30823fe7baaed459712d13f4cb2b79658d9a0af"
+                "reference": "f3b3356f49c00b110f58c2b255e1cc46ec4f6f76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/f30823fe7baaed459712d13f4cb2b79658d9a0af",
-                "reference": "f30823fe7baaed459712d13f4cb2b79658d9a0af",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/f3b3356f49c00b110f58c2b255e1cc46ec4f6f76",
+                "reference": "f3b3356f49c00b110f58c2b255e1cc46ec4f6f76",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/container": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -345,7 +360,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -354,14 +369,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "A simple, powerful events system.",
-            "time": "2013-05-16 17:11:10"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/filesystem",
@@ -370,16 +387,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "6db84b46c7ed3d36db1b0ee3c64b123d733a3570"
+                "reference": "9973bc25cdf1f132eac936cb303a8a544ab419c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/6db84b46c7ed3d36db1b0ee3c64b123d733a3570",
-                "reference": "6db84b46c7ed3d36db1b0ee3c64b123d733a3570",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/9973bc25cdf1f132eac936cb303a8a544ab419c4",
+                "reference": "9973bc25cdf1f132eac936cb303a8a544ab419c4",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "4.0.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0",
                 "symfony/finder": "2.3.x"
             },
@@ -389,7 +406,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -398,14 +415,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "A filesystem abstraction library.",
-            "time": "2013-05-22 01:06:27"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/http",
@@ -414,17 +433,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
-                "reference": "a3693d8175bf7532d37cfdc55db623ba65d2e552"
+                "reference": "0e1471a4264f684ce5b9cf2f3c0f1d581d24e23a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/http/zipball/a3693d8175bf7532d37cfdc55db623ba65d2e552",
-                "reference": "a3693d8175bf7532d37cfdc55db623ba65d2e552",
+                "url": "https://api.github.com/repos/illuminate/http/zipball/0e1471a4264f684ce5b9cf2f3c0f1d581d24e23a",
+                "reference": "0e1471a4264f684ce5b9cf2f3c0f1d581d24e23a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/session": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/session": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "symfony/http-foundation": "2.3.*"
             },
             "require-dev": {
@@ -434,7 +453,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -443,16 +462,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "keywords": [
-                "laravel"
-            ],
-            "time": "2013-05-21 13:20:36"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/redis",
@@ -461,16 +480,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/redis.git",
-                "reference": "5eddd025acbaeab98a18276dda7cf5ac061e83c6"
+                "reference": "7cf3593e3eb5533168eb1c529a4fb6c4bfe88ace"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/redis/zipball/5eddd025acbaeab98a18276dda7cf5ac061e83c6",
-                "reference": "5eddd025acbaeab98a18276dda7cf5ac061e83c6",
+                "url": "https://api.github.com/repos/illuminate/redis/zipball/7cf3593e3eb5533168eb1c529a4fb6c4bfe88ace",
+                "reference": "7cf3593e3eb5533168eb1c529a4fb6c4bfe88ace",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "4.0.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0",
                 "predis/predis": "0.*"
             },
@@ -481,7 +500,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -490,16 +509,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "keywords": [
-                "laravel"
-            ],
-            "time": "2013-05-14 04:26:13"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/routing",
@@ -508,33 +527,33 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/routing.git",
-                "reference": "b137aad336971714c16ca9195ad3d55ef6e07644"
+                "reference": "008f6146e82c0cbf66cb56cc76921cb85a011ff7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/routing/zipball/b137aad336971714c16ca9195ad3d55ef6e07644",
-                "reference": "b137aad336971714c16ca9195ad3d55ef6e07644",
+                "url": "https://api.github.com/repos/illuminate/routing/zipball/008f6146e82c0cbf66cb56cc76921cb85a011ff7",
+                "reference": "008f6146e82c0cbf66cb56cc76921cb85a011ff7",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "4.0.x",
-                "illuminate/http": "4.0.x",
-                "illuminate/session": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/container": "4.1.x",
+                "illuminate/http": "4.1.x",
+                "illuminate/session": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "symfony/http-foundation": "2.3.*",
                 "symfony/http-kernel": "2.3.*",
                 "symfony/routing": "2.3.*"
             },
             "require-dev": {
-                "illuminate/console": "4.0.x",
-                "illuminate/filesystem": "4.0.x",
+                "illuminate/console": "4.1.x",
+                "illuminate/filesystem": "4.1.x",
                 "mockery/mockery": "0.7.2",
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -543,17 +562,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "A swift routing and dispatch component.",
-            "keywords": [
-                "laravel"
-            ],
-            "time": "2013-05-25 19:32:36"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/session",
@@ -562,31 +580,31 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
-                "reference": "98f5aaf754ae01451f1909c126a750cf979bde9c"
+                "reference": "583f17768e4230276dff62034bd438e55897f7cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/session/zipball/98f5aaf754ae01451f1909c126a750cf979bde9c",
-                "reference": "98f5aaf754ae01451f1909c126a750cf979bde9c",
+                "url": "https://api.github.com/repos/illuminate/session/zipball/583f17768e4230276dff62034bd438e55897f7cb",
+                "reference": "583f17768e4230276dff62034bd438e55897f7cb",
                 "shasum": ""
             },
             "require": {
-                "illuminate/cache": "4.0.x",
-                "illuminate/cookie": "4.0.x",
-                "illuminate/encryption": "4.0.x",
-                "illuminate/support": "4.0.x",
+                "illuminate/cache": "4.1.x",
+                "illuminate/cookie": "4.1.x",
+                "illuminate/encryption": "4.1.x",
+                "illuminate/support": "4.1.x",
                 "php": ">=5.3.0",
                 "symfony/http-foundation": "2.3.*"
             },
             "require-dev": {
-                "illuminate/console": "4.0.x",
+                "illuminate/console": "4.1.x",
                 "mockery/mockery": ">=0.7.2",
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -595,14 +613,16 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "A tidy, simple session library.",
-            "time": "2013-05-18 01:16:41"
+            "time": "2013-05-28 20:37:43"
         },
         {
             "name": "illuminate/support",
@@ -611,12 +631,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "435ead4a87e7fd73deffaedfa7cf2e6dac437290"
+                "reference": "35b0bc88eee750f7eecf03d9b4c19837e4ec72e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/435ead4a87e7fd73deffaedfa7cf2e6dac437290",
-                "reference": "435ead4a87e7fd73deffaedfa7cf2e6dac437290",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/35b0bc88eee750f7eecf03d9b4c19837e4ec72e9",
+                "reference": "35b0bc88eee750f7eecf03d9b4c19837e4ec72e9",
                 "shasum": ""
             },
             "require": {
@@ -630,7 +650,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -642,14 +662,16 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "Various utilities and support functions.",
-            "time": "2013-05-24 13:00:52"
+            "time": "2013-05-28 18:31:39"
         },
         {
             "name": "imagine/imagine",
@@ -948,12 +970,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "v2.3.0-RC1"
+                "reference": "cc53e89d247eca7acb21f1c41bc3c318fbc7e4ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/v2.3.0-RC1",
-                "reference": "v2.3.0-RC1",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/cc53e89d247eca7acb21f1c41bc3c318fbc7e4ed",
+                "reference": "cc53e89d247eca7acb21f1c41bc3c318fbc7e4ed",
                 "shasum": ""
             },
             "require": {
@@ -986,7 +1008,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-25 12:12:10"
+            "time": "2013-05-27 14:49:21"
         },
         {
             "name": "symfony/http-foundation",
