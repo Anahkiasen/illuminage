@@ -174,13 +174,13 @@ class Image extends Tag
   public function thumbnail($width, $height)
   {
     // Compute thumbnail ratio
-    if     ($this->getOriginalSize()->getWidth()  < $width)  $ratio = $width  / $this->getOriginalSize()->getWidth();
-    elseif ($this->getOriginalSize()->getHeight() < $height) $ratio = $height / $this->getOriginalSize()->getHeight();
-    else   $ratio = $width / $this->getOriginalSize()->getWidth();
+    $ratios = array($width  / $this->getOriginalSize()->getWidth(), $height / $this->getOriginalSize()->getHeight());
+    if     ($this->getOriginalSize()->getWidth()  < $width)  $ratio = $ratios[0];
+    elseif ($this->getOriginalSize()->getHeight() < $height) $ratio = $ratios[1];
+    else   $ratio = max($ratios);
 
     // Resize image to fit bounds
-    $resize = new Box($this->getOriginalSize()->getWidth(), $this->getOriginalSize()->getHeight());
-    $resize = $resize->scale($ratio);
+    $resize = $this->getOriginalSize()->scale($ratio);
     $this->salts['resize'] = array($resize);
 
     // Crop image

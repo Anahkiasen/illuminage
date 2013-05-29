@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f3de20171c18b6f685267169807aad1e",
+    "hash": "e839c7d028cdc4bf232b5d7619d51dd8",
     "packages": [
         {
             "name": "anahkiasen/html-object",
@@ -1196,12 +1196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "422e6dc81ef12e4714248a06bca6dd382f3b38dd"
+                "reference": "70739803f85065cc2ec00fae662bdcaaa4df487e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/422e6dc81ef12e4714248a06bca6dd382f3b38dd",
-                "reference": "422e6dc81ef12e4714248a06bca6dd382f3b38dd",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/70739803f85065cc2ec00fae662bdcaaa4df487e",
+                "reference": "70739803f85065cc2ec00fae662bdcaaa4df487e",
                 "shasum": ""
             },
             "require": {
@@ -1242,7 +1242,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2013-05-13 12:56:51"
+            "time": "2013-05-29 09:13:17"
         }
     ],
     "aliases": [
