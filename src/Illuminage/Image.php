@@ -6,7 +6,6 @@ use HtmlObject\Traits\Tag;
 use Imagine\Image\Box;
 use Imagine\Image\Point;
 use Imagine\Image\Color;
-use Imagine\Image\ImageInterface;
 
 /**
  * A basic image

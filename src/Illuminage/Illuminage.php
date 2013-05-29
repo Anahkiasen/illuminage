@@ -1,7 +1,6 @@
 <?php
 namespace Illuminage;
 
-use Exception;
 use Illuminate\Cache\FileStore;
 use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository as Config;
