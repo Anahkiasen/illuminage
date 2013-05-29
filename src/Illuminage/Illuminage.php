@@ -54,9 +54,7 @@ class Illuminage
   /**
    * Set up Illuminage
    *
-   * @param Cache        $cache
-   * @param UrlGenerator $url
-   * @param Imagine      $imagine
+   * @param Container $container A base Container to bind onto
    */
   public function __construct($container = null)
   {
@@ -71,6 +69,8 @@ class Illuminage
   /**
    * Create Illuminage's IoC Container
    *
+   * @param Container $container A base Container to bind onto
+   *
    * @return Container
    */
   protected function createContainer($container = null)
@@ -81,9 +81,6 @@ class Illuminage
     // System classes ---------------------------------------------- /
 
     $app->bindIf('Filesystem', 'Illuminate\Filesystem\Filesystem');
-    $app->bindIf('FileLoader', function($app) {
-      return new FileLoader($app['Filesystem'], __DIR__.'/../../');
-    });
 
     $app->bindIf('request', function() {
       return Request::createFromGlobals();
@@ -91,19 +88,14 @@ class Illuminage
 
     // Core classes ------------------------------------------------ /
 
-    if (!$app->bound('config')) $app->bindIf('config', function($app) {
-      return new Repository($app['FileLoader'], 'src/config');
+    $app->bindIf('config', function($app) {
+      $fileloader = new FileLoader($app['Filesystem'], __DIR__.'/../../');
+
+      return new Repository($fileloader, 'src/config');
     });
 
     $app->bindIf('cache', function($app) {
       return new FileStore($app['Filesystem'], __DIR__.'/../../public');
-    });
-
-    $app->bindIf('imagine', function($app) use ($me) {
-      $engine  = $me->getOption('image_engine');
-      $imagine = "\Imagine\\$engine\Imagine";
-
-      return new $imagine;
     });
 
     $app->bindIf('url', function($app) {
@@ -113,6 +105,13 @@ class Illuminage
     });
 
     // Illuminage classes ------------------------------------------ /
+
+    $app->bindIf('imagine', function($app) use ($me) {
+      $engine  = $me->getOption('image_engine');
+      $imagine = "\Imagine\\$engine\Imagine";
+
+      return new $imagine;
+    });
 
     $app->bindIf('illuminage.processor', function($app) {
       return new ImageProcessor($app['imagine']);
@@ -216,7 +215,7 @@ class Illuminage
   /**
    * Get the URL to an image
    *
-   * @param image $image
+   * @param Image $image
    *
    * @return string
    */

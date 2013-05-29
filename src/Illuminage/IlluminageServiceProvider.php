@@ -3,6 +3,9 @@ namespace Illuminage;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Service Provider for Laravel 4
+ */
 class IlluminageServiceProvider extends ServiceProvider
 {
 

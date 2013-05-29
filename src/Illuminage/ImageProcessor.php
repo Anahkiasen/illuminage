@@ -12,8 +12,7 @@ class ImageProcessor
   /**
    * Build a new ImageProcessor
    *
-   * @param Imagine $imagine
-   * @param array   $processors An array of Processors
+   * @param ImagineInterface $imagine
    */
   public function __construct(ImagineInterface $imagine)
   {
