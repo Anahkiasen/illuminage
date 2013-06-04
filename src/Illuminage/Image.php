@@ -133,6 +133,28 @@ class Image extends Tag
     return $this->illuminage->process($this);
   }
 
+  /**
+   * Get the Image's path
+   *
+   * @return string
+   */
+  public function getPath()
+  {
+    return $this->getThumb();
+  }
+
+  /**
+   * Get the processer Image's relative path
+   *
+   * @return string
+   */
+  public function getRelativePath()
+  {
+    $path = $this->getPath();
+
+    return str_replace($this->illuminage->request->root().'/', null, $path);
+  }
+
   ////////////////////////////////////////////////////////////////////
   ////////////////////////////// FILTERS /////////////////////////////
   ////////////////////////////////////////////////////////////////////

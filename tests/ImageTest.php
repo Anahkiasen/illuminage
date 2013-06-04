@@ -1,9 +1,19 @@
 <?php
 class ImageTest extends IlluminageTests
 {
-  public function testCanGetFullPathToImage()
+  public function testCanGetFullPathToOriginalImage()
   {
     $this->assertEquals('tests/public/foo.jpg', $this->thumb->getImagePath());
+  }
+
+  public function testCanGetFullPathToProcessedImage()
+  {
+    $this->assertEquals('http://:/a9434d21b592a5167dd2a3527f34d73d.jpg', $this->thumb->getPath());
+  }
+
+  public function testCanGetRelativePathToProcessedImage()
+  {
+    $this->assertEquals('a9434d21b592a5167dd2a3527f34d73d.jpg', $this->thumb->getRelativePath());
   }
 
   public function testCanRenderThumb()

@@ -67,6 +67,18 @@ class Illuminage
   }
 
   /**
+   * Get an instance from the Container
+   *
+   * @param  string $key
+   *
+   * @return object
+   */
+  public function __get($key)
+  {
+    return $this->app->make($key);
+  }
+
+  /**
    * Create Illuminage's IoC Container
    *
    * @param Container $container A base Container to bind onto
