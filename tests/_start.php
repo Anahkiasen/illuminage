@@ -1,10 +1,22 @@
 <?php
-use Illuminate\Container\Container;
 use Illuminage\Facades\Illuminage;
+use Illuminate\Container\Container;
 
 abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 {
+
+  /**
+   * The test image hash
+   *
+   * @var string
+   */
   protected $hash = 'a9434d21b592a5167dd2a3527f34d73d.jpg';
+
+  /**
+   * The IoC Container
+   *
+   * @var Container
+   */
   protected static $app;
 
   public static function setUpBeforeClass()
@@ -37,6 +49,10 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
   public function tearDown()
   {
     $testThumb = __DIR__.'/public/'.$this->hash;
-    if (file_exists($testThumb)) unlink($testThumb);
+
+    if (file_exists($testThumb)) {
+      unlink($testThumb);
+    }
   }
+
 }

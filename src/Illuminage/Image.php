@@ -23,9 +23,16 @@ class Image extends Tag
   /**
    * Path to the image
    *
-   * @var string
+   * @var SplFileImage
    */
   protected $image;
+
+  /**
+   * The Processed image
+   *
+   * @var SplFileImage
+   */
+  protected $processedImage;
 
   /**
    * The Illuminage instance
@@ -57,7 +64,7 @@ class Image extends Tag
   public function __construct(Illuminage $illuminage, $image)
   {
     $this->illuminage = $illuminage;
-    $this->image      = $image;
+    $this->image      = new SplFileImage($this->illuminage->getPublicFolder().$image);
   }
 
   /**
@@ -81,6 +88,20 @@ class Image extends Tag
   ////////////////////////// PUBLIC METHODS //////////////////////////
   ////////////////////////////////////////////////////////////////////
 
+  // Salts --------------------------------------------------------- /
+
+  /**
+   * Get the Image's salts
+   *
+   * @return string|array
+   */
+  public function getSalts()
+  {
+    return $this->salts;
+  }
+
+  // Original image informations ----------------------------------- /
+
   /**
    * Get the image
    *
@@ -98,7 +119,7 @@ class Image extends Tag
    */
   public function getOriginalSize()
   {
-    $size = getimagesize($this->getImagePath());
+    $size = $this->image->getDimensions();
 
     return new Box($size[0], $size[1]);
   }
@@ -108,29 +129,24 @@ class Image extends Tag
    *
    * @return string
    */
-  public function getImagePath()
+  public function getOriginalImagePath()
   {
-    return $this->illuminage->getPublicFolder().$this->image;
+    return $this->image->getPathname();
   }
 
-  /**
-   * Get the Image's salts
-   *
-   * @return string|array
-   */
-  public function getSalts()
-  {
-    return $this->salts;
-  }
+  // Processed image informations ---------------------------------- /
 
   /**
    * Get the rendered thumb's path
    *
+   * @deprecated This is replaced by ->getPath()
    * @return string
    */
   public function getThumb()
   {
-    return $this->illuminage->process($this);
+    $this->getProcessedImage();
+
+    return $this->illuminage->getUrlTo($this);
   }
 
   /**
@@ -265,6 +281,21 @@ class Image extends Tag
   ////////////////////////////////////////////////////////////////////
 
   /**
+   * Process the original image and returns the SplFileImage
+   *
+   * @return string
+   */
+  protected function getProcessedImage()
+  {
+    if (!$this->processedImage) {
+      $image = $this->illuminage->process($this);
+      $this->processedImage = new SplFileImage($image);
+    }
+
+    return $this->processedImage;
+  }
+
+  /**
    * Renders the image
    *
    * @return string
@@ -272,7 +303,7 @@ class Image extends Tag
   public function injectProperties()
   {
     return array(
-      'src' => $this->getThumb()
+      'src' => $this->getPath()
     );
   }
 

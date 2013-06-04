@@ -3,7 +3,7 @@ class ImageTest extends IlluminageTests
 {
   public function testCanGetFullPathToOriginalImage()
   {
-    $this->assertEquals('tests/public/foo.jpg', $this->thumb->getImagePath());
+    $this->assertEquals('tests/public/foo.jpg', $this->thumb->getOriginalImagePath());
   }
 
   public function testCanGetFullPathToProcessedImage()
@@ -37,13 +37,13 @@ class ImageTest extends IlluminageTests
 
   public function testCanResizeOnTheFly()
   {
-    $this->assertEquals('http://:/a8478c716dbf27bf7c401db9b6d75380.jpg', $this->image->resize(200, 250)->getThumb());
+    $this->assertEquals('http://:/a8478c716dbf27bf7c401db9b6d75380.jpg', $this->image->resize(200, 250)->getPath());
   }
 
   public function testCanApplyFilters()
   {
     $image = $this->image->resize(300, 300)->grayscale();
 
-    $this->assertEquals('http://:/cf0ea92eb1e8bcee543e26f7cc2eb6ff.jpg', $image->getThumb());
+    $this->assertEquals('http://:/cf0ea92eb1e8bcee543e26f7cc2eb6ff.jpg', $image->getPath());
   }
 }

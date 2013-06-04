@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\Facade;
 class Illuminage extends Facade
 {
 
-	/**
-	 * Retrieve Illuminage from the Container
-	 *
-	 * @return string
-	 */
+    /**
+     * Retrieve Illuminage from the Container
+     *
+     * @return string
+     */
   public static function getFacadeAccessor()
   {
-  	return 'illuminage';
+      return 'illuminage';
   }
 
 }

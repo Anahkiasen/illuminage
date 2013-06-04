@@ -3,7 +3,6 @@ namespace Illuminage;
 
 use Illuminate\Cache\FileStore;
 use Illuminate\Config\FileLoader;
-use Illuminate\Config\Repository as Config;
 use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
 use Illuminate\Http\Request;
@@ -210,14 +209,16 @@ class Illuminage
    */
   public function process(Image $image)
   {
+    $endpoint = $this->cache->getCachePathOf($image);
+
     // If the image hasn't yet been processed, do it
     // and then cache it
     if (!$this->cache->isCached($image)) {
       $processedImage = $this->app['illuminage.processor']->process($image);
-      $processedImage->save($this->cache->getCachePathOf($image));
+      $processedImage->save($endpoint);
     }
 
-    return $this->getUrlTo($image);
+    return $endpoint;
   }
 
   ////////////////////////////////////////////////////////////////////
@@ -231,7 +232,7 @@ class Illuminage
    *
    * @return string
    */
-  protected function getUrlTo(Image $image)
+  public function getUrlTo(Image $image)
   {
     return $this->app['url']->asset(
       $this->getOption('cache_folder').

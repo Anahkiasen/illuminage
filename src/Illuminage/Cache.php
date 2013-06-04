@@ -33,7 +33,7 @@ class Cache
    */
   public function getHashOf(Image $image)
   {
-    $imagePath = $image->getImagePath();
+    $imagePath = $image->getOriginalImagePath();
 
     // Build the salt array
     $salts   = $image->getSalts();
