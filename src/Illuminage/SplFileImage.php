@@ -8,6 +8,7 @@ use SplFileObject;
  */
 class SplFileImage extends SplFileObject
 {
+	private $dimensions = null;
 
 	/**
 	 * Get the image's dimensions
@@ -16,7 +17,10 @@ class SplFileImage extends SplFileObject
 	 */
 	public function getDimensions()
 	{
-		return getimagesize($this->getRealPath());
+		if (is_null($this->dimensions)) {
+			$this->dimensions = getimagesize($this->getRealPath());
+		}
+		return $this->dimensions;
 	}
 
 	/**
