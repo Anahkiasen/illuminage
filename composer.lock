@@ -235,12 +235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "bd8203dc99d25973a4822fa33dab200f7bb113e0"
+                "reference": "699b642f1035a395553894fcd5726a4b93fc4e0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/bd8203dc99d25973a4822fa33dab200f7bb113e0",
-                "reference": "bd8203dc99d25973a4822fa33dab200f7bb113e0",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/699b642f1035a395553894fcd5726a4b93fc4e0d",
+                "reference": "699b642f1035a395553894fcd5726a4b93fc4e0d",
                 "shasum": ""
             },
             "require": {
@@ -286,7 +286,7 @@
                 "orm",
                 "sql"
             ],
-            "time": "2013-06-04 04:06:36"
+            "time": "2013-06-06 03:30:19"
         },
         {
             "name": "illuminate/encryption",
@@ -580,12 +580,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
-                "reference": "583f17768e4230276dff62034bd438e55897f7cb"
+                "reference": "83b081e6f3afc9c4781d6b8f89c4ff9790ae2cdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/session/zipball/583f17768e4230276dff62034bd438e55897f7cb",
-                "reference": "583f17768e4230276dff62034bd438e55897f7cb",
+                "url": "https://api.github.com/repos/illuminate/session/zipball/83b081e6f3afc9c4781d6b8f89c4ff9790ae2cdf",
+                "reference": "83b081e6f3afc9c4781d6b8f89c4ff9790ae2cdf",
                 "shasum": ""
             },
             "require": {
@@ -622,7 +622,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-05-28 20:37:43"
+            "time": "2013-06-06 03:56:56"
         },
         {
             "name": "illuminate/support",
@@ -631,12 +631,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "f7715c840e47c6d1c8ee57d14d3eb2a3a4e19383"
+                "reference": "21f6d20e45aa0b83e2ea4b0232f361bc16c6f9e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/f7715c840e47c6d1c8ee57d14d3eb2a3a4e19383",
-                "reference": "f7715c840e47c6d1c8ee57d14d3eb2a3a4e19383",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/21f6d20e45aa0b83e2ea4b0232f361bc16c6f9e4",
+                "reference": "21f6d20e45aa0b83e2ea4b0232f361bc16c6f9e4",
                 "shasum": ""
             },
             "require": {
@@ -671,7 +671,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-06-04 04:09:25"
+            "time": "2013-06-06 01:53:20"
         },
         {
             "name": "imagine/imagine",

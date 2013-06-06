@@ -8,12 +8,12 @@ class ImageTest extends IlluminageTests
 
   public function testCanGetFullPathToProcessedImage()
   {
-    $this->assertEquals('http://:/a9434d21b592a5167dd2a3527f34d73d.jpg', $this->thumb->getPath());
+    $this->assertEquals('http://:/'.$this->hash, $this->thumb->getPath());
   }
 
   public function testCanGetRelativePathToProcessedImage()
   {
-    $this->assertEquals('a9434d21b592a5167dd2a3527f34d73d.jpg', $this->thumb->getRelativePath());
+    $this->assertEquals($this->hash, $this->thumb->getRelativePath());
   }
 
   public function testCanRenderThumb()
@@ -37,13 +37,13 @@ class ImageTest extends IlluminageTests
 
   public function testCanResizeOnTheFly()
   {
-    $this->assertEquals('http://:/a8478c716dbf27bf7c401db9b6d75380.jpg', $this->image->resize(200, 250)->getPath());
+    $this->assertEquals('http://:/a26155986d37968d8f5e0387c9515d6e.jpg', $this->image->resize(200, 250)->getPath());
   }
 
   public function testCanApplyFilters()
   {
     $image = $this->image->resize(300, 300)->grayscale();
 
-    $this->assertEquals('http://:/cf0ea92eb1e8bcee543e26f7cc2eb6ff.jpg', $image->getPath());
+    $this->assertEquals('http://:/e7341bc6ea7a50521508b97591e97c57.jpg', $image->getPath());
   }
 }
