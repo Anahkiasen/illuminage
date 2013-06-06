@@ -287,7 +287,7 @@ class Image extends Tag
    */
   protected function getProcessedImage()
   {
-    if (!$this->processedImage) {
+    if (is_null($this->processedImage)) {
       $image = $this->illuminage->process($this);
       $this->processedImage = new SplFileImage($image);
     }
