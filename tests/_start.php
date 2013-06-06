@@ -10,7 +10,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
    *
    * @var string
    */
-  protected $hash = 'a44c4abbcb1747754339cd36355326c8.jpg';
+  protected $hash = '4074e59cd0b0ef6494191a1d19454945.jpg';
 
   /**
    * The IoC Container
@@ -48,11 +48,14 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 
   public function tearDown()
   {
-    $testThumb = __DIR__.'/public/'.$this->hash;
-
-    if (file_exists($testThumb)) {
-      unlink($testThumb);
-    }
+    $this->unlink($this->hash);
   }
 
+  protected function unlink($file)
+  {
+    $path = __DIR__.'/public/'.$file;
+    if (file_exists($path)) {
+      unlink($path);
+    }
+  }
 }

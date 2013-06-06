@@ -100,6 +100,44 @@ class Image extends Tag
     return $this->salts;
   }
 
+  /**
+   * Get the Image's Imagine salts
+   *
+   * @return string|array
+   */
+  public function getImagineSalts()
+  {
+    $imagineSalts = $this->salts;
+    if (isset($imagineSalts['_thumbnail'])) {
+      $box = $imagineSalts['_thumbnail'];
+      unset($imagineSalts['_thumbnail']);
+
+      // Compute thumbnail ratio
+      $ratios = array(
+        $box->getWidth()  / $this->getOriginalSize()->getWidth(),
+        $box->getHeight() / $this->getOriginalSize()->getHeight()
+      );
+      if     ($this->getOriginalSize()->getWidth()  < $box->getWidth())  $ratio = $ratios[0];
+      elseif ($this->getOriginalSize()->getHeight() < $box->getHeight()) $ratio = $ratios[1];
+      else   $ratio = max($ratios);
+
+      // Resize this to fit bounds
+      $resize = $this->getOriginalSize()->scale($ratio);
+      $imagineSalts['resize'] = array($resize);
+
+      // Crop image
+      $imagineSalts['crop'] = array(
+        new Point(
+          max(0, round(($resize->getWidth()  - $box->getWidth())  / 2)),
+          max(0, round(($resize->getHeight() - $box->getHeight()) / 2))
+        ),
+        $box
+      );
+    }
+
+    return $imagineSalts;
+  }
+
   // Original image informations ----------------------------------- /
 
   /**
@@ -210,24 +248,7 @@ class Image extends Tag
    */
   public function thumbnail($width, $height)
   {
-    // Compute thumbnail ratio
-    $ratios = array($width  / $this->getOriginalSize()->getWidth(), $height / $this->getOriginalSize()->getHeight());
-    if     ($this->getOriginalSize()->getWidth()  < $width)  $ratio = $ratios[0];
-    elseif ($this->getOriginalSize()->getHeight() < $height) $ratio = $ratios[1];
-    else   $ratio = max($ratios);
-
-    // Resize image to fit bounds
-    $resize = $this->getOriginalSize()->scale($ratio);
-    $this->salts['resize'] = array($resize);
-
-    // Crop image
-    $this->salts['crop'] = array(
-      new Point(
-        max(0, round(($resize->getWidth()  - $width)  / 2)),
-        max(0, round(($resize->getHeight() - $height) / 2))
-      ),
-      new Box($width, $height)
-    );
+    $this->salts['_thumbnail'] = new Box($width, $height);
 
     return $this;
   }
