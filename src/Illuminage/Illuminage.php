@@ -11,6 +11,8 @@ use Symfony\Component\Routing\RouteCollection;
 
 /**
  * Handles image creation and caching
+ *
+ * @property request $request
  */
 class Illuminage
 {

@@ -10,6 +10,13 @@ class ImageProcessor
 {
 
   /**
+   * The Imagine instance
+   *
+   * @var ImagineInterface
+   */
+  protected $imagine;
+
+  /**
    * Build a new ImageProcessor
    *
    * @param ImagineInterface $imagine
