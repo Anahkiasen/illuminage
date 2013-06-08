@@ -32,7 +32,7 @@ class ImageProcessor
    */
   public function process(Image $image)
   {
-    $processors = $image->getImagineSalts();
+    $processors = $image->getProcessedSalts();
     $image      = $this->imagine->open($image->getOriginalImagePath());
 
     // Apply each method one after the other

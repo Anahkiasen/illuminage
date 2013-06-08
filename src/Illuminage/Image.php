@@ -101,41 +101,16 @@ class Image extends Tag
   }
 
   /**
-   * Get the Image's Imagine salts
+   * Get the salts with the various processed properties
    *
-   * @return string|array
+   * @return array
    */
-  public function getImagineSalts()
+  public function getProcessedSalts()
   {
-    $imagineSalts = $this->salts;
-    if (isset($imagineSalts['_thumbnail'])) {
-      $box = $imagineSalts['_thumbnail'];
-      unset($imagineSalts['_thumbnail']);
+    $salts = $this->salts;
+    $salts = $this->processThumbnail($salts);
 
-      // Compute thumbnail ratio
-      $ratios = array(
-        $box->getWidth()  / $this->getOriginalSize()->getWidth(),
-        $box->getHeight() / $this->getOriginalSize()->getHeight()
-      );
-      if     ($this->getOriginalSize()->getWidth()  < $box->getWidth())  $ratio = $ratios[0];
-      elseif ($this->getOriginalSize()->getHeight() < $box->getHeight()) $ratio = $ratios[1];
-      else   $ratio = max($ratios);
-
-      // Resize this to fit bounds
-      $resize = $this->getOriginalSize()->scale($ratio);
-      $imagineSalts['resize'] = array($resize);
-
-      // Crop image
-      $imagineSalts['crop'] = array(
-        new Point(
-          max(0, round(($resize->getWidth()  - $box->getWidth())  / 2)),
-          max(0, round(($resize->getHeight() - $box->getHeight()) / 2))
-        ),
-        $box
-      );
-    }
-
-    return $imagineSalts;
+    return $salts;
   }
 
   // Original image informations ----------------------------------- /
@@ -212,6 +187,8 @@ class Image extends Tag
   ////////////////////////////////////////////////////////////////////
   ////////////////////////////// FILTERS /////////////////////////////
   ////////////////////////////////////////////////////////////////////
+
+  // Live filters -------------------------------------------------- /
 
   /**
    * Applies a Closure to the Imagine instance
@@ -295,6 +272,47 @@ class Image extends Tag
     $this->salts['effects']['colorize'] = new Color($color);
 
     return $this;
+  }
+
+  // Processed filters --------------------------------------------- /
+
+  /**
+   * Process the thumbnail salt
+   *
+   * @param  array  $salts        An array of salts
+   *
+   * @return array
+   */
+  protected function processThumbnail(array $salts)
+  {
+    if (isset($salts['_thumbnail'])) {
+      $box = $salts['_thumbnail'];
+      unset($salts['_thumbnail']);
+
+      // Compute thumbnail ratio
+      $ratios = array(
+        $box->getWidth()  / $this->getOriginalSize()->getWidth(),
+        $box->getHeight() / $this->getOriginalSize()->getHeight()
+      );
+      if     ($this->getOriginalSize()->getWidth()  < $box->getWidth())  $ratio = $ratios[0];
+      elseif ($this->getOriginalSize()->getHeight() < $box->getHeight()) $ratio = $ratios[1];
+      else   $ratio = max($ratios);
+
+      // Resize this to fit bounds
+      $resize = $this->getOriginalSize()->scale($ratio);
+      $salts['resize'] = array($resize);
+
+      // Crop image
+      $salts['crop'] = array(
+        new Point(
+          max(0, round(($resize->getWidth()  - $box->getWidth())  / 2)),
+          max(0, round(($resize->getHeight() - $box->getHeight()) / 2))
+        ),
+        $box
+      );
+    }
+
+    return $salts;
   }
 
   ////////////////////////////////////////////////////////////////////
