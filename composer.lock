@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Anahkiasen/html-object.git",
-                "reference": "6bdbafce8a775175e4c2fc71ce577f6b917cd7be"
+                "reference": "216bc3fdf29da62e50413aae41220280f53b37bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/6bdbafce8a775175e4c2fc71ce577f6b917cd7be",
-                "reference": "6bdbafce8a775175e4c2fc71ce577f6b917cd7be",
+                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/216bc3fdf29da62e50413aae41220280f53b37bb",
+                "reference": "216bc3fdf29da62e50413aae41220280f53b37bb",
                 "shasum": ""
             },
             "require": {
@@ -39,7 +39,7 @@
                 }
             ],
             "description": "A set of classes to create and manipulate HTML objects abstractions",
-            "time": "2013-05-31 16:14:51"
+            "time": "2013-06-06 19:42:31"
         },
         {
             "name": "illuminate/cache",
@@ -235,12 +235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "699b642f1035a395553894fcd5726a4b93fc4e0d"
+                "reference": "0d31b368de8fe2be24fc6f30ec5de4531c036ae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/699b642f1035a395553894fcd5726a4b93fc4e0d",
-                "reference": "699b642f1035a395553894fcd5726a4b93fc4e0d",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/0d31b368de8fe2be24fc6f30ec5de4531c036ae6",
+                "reference": "0d31b368de8fe2be24fc6f30ec5de4531c036ae6",
                 "shasum": ""
             },
             "require": {
@@ -286,7 +286,7 @@
                 "orm",
                 "sql"
             ],
-            "time": "2013-06-06 03:30:19"
+            "time": "2013-06-08 03:41:08"
         },
         {
             "name": "illuminate/encryption",
@@ -631,12 +631,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "21f6d20e45aa0b83e2ea4b0232f361bc16c6f9e4"
+                "reference": "1a1a4b68480fe5f5da85afbb24777c9f1e50d64f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/21f6d20e45aa0b83e2ea4b0232f361bc16c6f9e4",
-                "reference": "21f6d20e45aa0b83e2ea4b0232f361bc16c6f9e4",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/1a1a4b68480fe5f5da85afbb24777c9f1e50d64f",
+                "reference": "1a1a4b68480fe5f5da85afbb24777c9f1e50d64f",
                 "shasum": ""
             },
             "require": {
@@ -671,7 +671,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2013-06-06 01:53:20"
+            "time": "2013-06-06 18:58:29"
         },
         {
             "name": "imagine/imagine",
