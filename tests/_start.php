@@ -10,7 +10,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
    *
    * @var string
    */
-  protected $hash = '4074e59cd0b0ef6494191a1d19454945.jpg';
+  protected $hash = '71f1bf02c46456f0bdacfef8d55f2cfd.jpg';
 
   /**
    * The IoC Container

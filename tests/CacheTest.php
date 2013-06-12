@@ -11,18 +11,11 @@ class CacheTest extends IlluminageTests
     $this->assertEquals($this->hash, $this->cache->getHashOf($this->thumb));
   }
 
-  public function testSameImageWithDifferentNameGetsSameHash()
-  {
-    $thumb = Illuminage::thumb('foocopy.jpg', 100, 100);
-
-    $this->assertEquals($this->hash, $this->cache->getHashOf($thumb));
-  }
-
   public function testCanComputeCorrectExtension()
   {
     $thumb = Illuminage::thumb('bar.png', 100, 100);
 
-    $this->assertEquals('537f44bda1ecd3ff75ed2a3229cbb855.png', $this->cache->getHashOf($thumb));
+    $this->assertEquals('4dcedf14005304462f3daf6aecf4f9ea.png', $this->cache->getHashOf($thumb));
   }
 
   public function testCanGetPathToCache()
