@@ -216,8 +216,9 @@ class Illuminage
     // If the image hasn't yet been processed, do it
     // and then cache it
     if (!$this->cache->isCached($image)) {
+      $quality = $image->getQuality() ?: $this->getOption('quality');
       $processedImage = $this->app['illuminage.processor']->process($image);
-      $processedImage->save($endpoint);
+      $processedImage->save($endpoint, array('quality' => (int) $quality));
     }
 
     return $endpoint;

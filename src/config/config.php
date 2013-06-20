@@ -6,4 +6,7 @@
   // The cache folder inside `public`
   'cache_folder' => 'packages/anahkiasen/illuminage/',
 
+  // The default image quality
+  'quality' => 75,
+
 );

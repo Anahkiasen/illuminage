@@ -21,6 +21,13 @@ class Image extends Tag
   protected $salts = array();
 
   /**
+   * The final image's quality
+   *
+   * @var integer
+   */
+  protected $quality;
+
+  /**
    * Path to the image
    *
    * @var SplFileImage
@@ -98,6 +105,16 @@ class Image extends Tag
   public function getSalts()
   {
     return $this->salts;
+  }
+
+  /**
+   * Get the processed image's quality
+   *
+   * @return integer
+   */
+  public function getQuality()
+  {
+    return $this->quality;
   }
 
   /**
@@ -270,6 +287,18 @@ class Image extends Tag
   public function colorize($color)
   {
     $this->salts['effects']['colorize'] = new Color($color);
+
+    return $this;
+  }
+
+  /**
+   * Change the processed image's quality
+   *
+   * @param  integer $quality
+   */
+  public function quality($quality)
+  {
+    $this->quality = $quality;
 
     return $this;
   }

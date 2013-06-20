@@ -10,7 +10,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
    *
    * @var string
    */
-  protected $hash = '71f1bf02c46456f0bdacfef8d55f2cfd.jpg';
+  protected $hash = '7307998b9607c2c52941e2f2c8fb50c2.jpg';
 
   /**
    * The IoC Container
@@ -26,6 +26,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
     $app->bind('config', function() {
       return Mockery::mock('config', function($mock) {
         $mock->shouldReceive('get')->with('config.image_engine', '')->andReturn('Gd');
+        $mock->shouldReceive('get')->with('config.quality', '')->andReturn(75);
         $mock->shouldReceive('get')->with('config.cache_folder', '')->andReturn('');
       });
     });
