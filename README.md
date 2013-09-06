@@ -7,7 +7,7 @@ First do `composer require anahkiasen/illuminage:dev-master`.
 Then if you're on a Laravel app, add the following to the `providers` array in `app/config/app.php` :
 
 ```php
-'Illuminate\IlluminateServiceProvider',
+'Illuminage\IlluminageServiceProvider',
 ```
 
 And this in the `facades` array in the same file :
