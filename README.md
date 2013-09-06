@@ -1,5 +1,22 @@
-Illuminage
-==========
+# Illuminage
+
+## Setup
+
+First do `composer require anahkiasen/illuminage:dev-master`.
+
+Then if you're on a Laravel app, add the following to the `providers` array in `app/config/app.php` :
+
+```php
+'Illuminate\IlluminateServiceProvider',
+```
+
+And this in the `facades` array in the same file :
+
+```php
+'Illuminage' => 'Illuminage\Facades\Illuminage',
+```
+
+## Usage
 
 Illuminage is a wrapper for the Imagine library to hook into the Laravel framework. It implements elegant shortcuts around Imagine and a smart cache system.
 
