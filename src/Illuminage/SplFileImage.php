@@ -8,6 +8,11 @@ use SplFileObject;
  */
 class SplFileImage extends SplFileObject
 {
+  /**
+   * The image's dimensions
+   *
+   * @var array
+   */
   private $dimensions = null;
 
   /**
@@ -47,5 +52,4 @@ class SplFileImage extends SplFileObject
 
     return $dimensions[1];
   }
-
 }

@@ -6,13 +6,13 @@ use HtmlObject\Traits\Tag;
 use Imagine\Image\Box;
 use Imagine\Image\Color;
 use Imagine\Image\Point;
+use Illuminate\Container\Container;
 
 /**
  * A basic image
  */
 class Image extends Tag
 {
-
   /**
    * An array of cache salts to use
    *
@@ -42,11 +42,11 @@ class Image extends Tag
   protected $processedImage;
 
   /**
-   * The Illuminage instance
+   * The IoC Container
    *
-   * @var Illuminage
+   * @var Container
    */
-  protected $illuminage;
+  protected $app;
 
   /**
    * The HtmlObject element
@@ -68,10 +68,10 @@ class Image extends Tag
    * @param Illuminage $illuminage
    * @param string     $image       Path to the image
    */
-  public function __construct(Illuminage $illuminage, $image)
+  public function __construct(Container $app, $image)
   {
-    $this->illuminage = $illuminage;
-    $this->image      = new SplFileImage($this->illuminage->getPublicFolder().$image);
+    $this->app   = $app;
+    $this->image = new SplFileImage($app['illuminage']->getPublicFolder().$image);
   }
 
   /**
@@ -176,7 +176,7 @@ class Image extends Tag
   {
     $this->getProcessedImage();
 
-    return $this->illuminage->getUrlTo($this);
+    return $this->app['illuminage']->getUrlTo($this);
   }
 
   /**
@@ -198,7 +198,7 @@ class Image extends Tag
   {
     $path = $this->getPath();
 
-    return str_replace($this->illuminage->request->root().'/', null, $path);
+    return str_replace($this->app['request']->root().'/', null, $path);
   }
 
   ////////////////////////////////////////////////////////////////////
@@ -356,7 +356,7 @@ class Image extends Tag
   protected function getProcessedImage()
   {
     if (is_null($this->processedImage)) {
-      $image = $this->illuminage->process($this);
+      $image = $this->app['illuminage']->process($this);
       $this->processedImage = new SplFileImage($image);
     }
 
@@ -374,5 +374,4 @@ class Image extends Tag
       'src' => $this->getPath()
     );
   }
-
 }

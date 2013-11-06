@@ -20,7 +20,7 @@ class ImageTest extends IlluminageTests
   {
     $this->assertEquals('<img src="http://:/' .$this->hash. '">', $this->thumb->render());
 
-    unlink($this->cache->getCachePathOf($this->thumb));
+    unlink($this->app['illuminage.cache']->getCachePathOf($this->thumb));
   }
 
   public function testCanRenderThumbOnStringHint()

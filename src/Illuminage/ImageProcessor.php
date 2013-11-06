@@ -8,7 +8,6 @@ use Imagine\Image\ImagineInterface;
  */
 class ImageProcessor
 {
-
   /**
    * The Imagine instance
    *
@@ -98,5 +97,4 @@ class ImageProcessor
         return $imagine->$method($arguments[0], $arguments[1]);
     }
   }
-
 }

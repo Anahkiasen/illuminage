@@ -1,10 +1,8 @@
 <?php
-use Illuminage\Facades\Illuminage;
-use Illuminate\Container\Container;
+include __DIR__.'/../vendor/autoload.php';
 
 abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 {
-
   /**
    * The test image hash
    *
@@ -13,45 +11,51 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
   protected $hash = '7307998b9607c2c52941e2f2c8fb50c2.jpg';
 
   /**
-   * The IoC Container
+   * The Container
    *
    * @var Container
    */
-  protected static $app;
+  protected $app;
 
-  public static function setUpBeforeClass()
+  /**
+   * Setup the tests
+   */
+  public function setUp()
   {
-    $app = new Container;
+    $this->app = Illuminage\IlluminageServiceProvider::make();
+    $this->app['path.public'] = 'tests/public';
 
-    $app->bind('config', function() {
+    // Bind mocked config
+    $this->app->bind('config', function() {
       return Mockery::mock('config', function($mock) {
-        $mock->shouldReceive('get')->with('config.image_engine', '')->andReturn('Gd');
-        $mock->shouldReceive('get')->with('config.quality', '')->andReturn(75);
-        $mock->shouldReceive('get')->with('config.cache_folder', '')->andReturn('');
+        $mock->shouldReceive('get')->with('illuminage::image_engine', '')->andReturn('Gd');
+        $mock->shouldReceive('get')->with('illuminage::quality', '')->andReturn(75);
+        $mock->shouldReceive('get')->with('illuminage::cache_folder', '')->andReturn('');
       });
     });
 
-    $app['path.public'] = 'tests/public';
-
-    $app->bind('illuminage', function($app) {
-      return new \Illuminage\Illuminage($app);
-    });
-
-    Illuminage::setFacadeApplication($app);
+    // Create some dummy instances
+    $this->image = $this->app['illuminage']->image('foo.jpg');
+    $this->thumb = $this->app['illuminage']->thumb('foo.jpg', 100, 100);
   }
 
-  public function setUp()
-  {
-    $this->cache = new \Illuminage\Cache(Illuminage::getFacadeRoot());
-    $this->image = Illuminage::image('foo.jpg');
-    $this->thumb = Illuminage::thumb('foo.jpg', 100, 100);
-  }
-
+  /**
+   * Cleanup remaining images
+   *
+   * @return [type] [description]
+   */
   public function tearDown()
   {
     $this->unlink($this->hash);
   }
 
+  /**
+   * Remove an image safely
+   *
+   * @param string $file
+   *
+   * @return void
+   */
   protected function unlink($file)
   {
     $path = __DIR__.'/public/'.$file;

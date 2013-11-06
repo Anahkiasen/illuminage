@@ -1,35 +1,31 @@
 <?php
-include '_start.php';
-
-use Illuminage\Facades\Illuminage;
 
 class CacheTest extends IlluminageTests
 {
-
   public function testCanComputeHashOfThumb()
   {
-    $this->assertEquals($this->hash, $this->cache->getHashOf($this->thumb));
+    $this->assertEquals($this->hash, $this->app['illuminage.cache']->getHashOf($this->thumb));
   }
 
   public function testCanComputeCorrectExtension()
   {
-    $thumb = Illuminage::thumb('bar.png', 100, 100);
+    $thumb = $this->app['illuminage']->thumb('bar.png', 100, 100);
 
-    $this->assertEquals('f3238bdc5038ef68c68528dde8ca91b9.png', $this->cache->getHashOf($thumb));
+    $this->assertEquals('f3238bdc5038ef68c68528dde8ca91b9.png', $this->app['illuminage.cache']->getHashOf($thumb));
   }
 
   public function testCanGetPathToCache()
   {
-    $this->assertEquals('tests/public/'.$this->hash, $this->cache->getCachePathOf($this->thumb));
+    $this->assertEquals('tests/public/'.$this->hash, $this->app['illuminage.cache']->getCachePathOf($this->thumb));
   }
 
   public function testCanCheckIfAThumbIsCached()
   {
-    $path = $this->cache->getCachePathOf($this->thumb);
+    $path = $this->app['illuminage.cache']->getCachePathOf($this->thumb);
 
-    $this->assertFalse($this->cache->isCached($this->thumb));
+    $this->assertFalse($this->app['illuminage.cache']->isCached($this->thumb));
     file_put_contents($path, 'foo');
-    $this->assertTrue($this->cache->isCached($this->thumb));
+    $this->assertTrue($this->app['illuminage.cache']->isCached($this->thumb));
 
     unlink($path);
   }

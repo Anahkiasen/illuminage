@@ -1,13 +1,7 @@
 <?php
 namespace Illuminage;
 
-use Illuminate\Cache\FileStore;
-use Illuminate\Config\FileLoader;
-use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
-use Illuminate\Http\Request;
-use Illuminate\Routing\UrlGenerator;
-use Symfony\Component\Routing\RouteCollection;
 
 /**
  * Handles image creation and caching
@@ -16,7 +10,6 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class Illuminage
 {
-
   /**
    * The IoC Container
    *
@@ -25,116 +18,13 @@ class Illuminage
   protected $app;
 
   /**
-   * The UrlGenerator instance
-   *
-   * @var UrlGenerator
-   */
-  protected $url;
-
-  /**
-   * The Imagine instance
-   *
-   * @var Imagine
-   */
-  protected $imagine;
-
-  /**
-   * The Cache instance
-   *
-   * @var Cache
-   */
-  protected $cache;
-
-  /**
-   * The Config instance
-   *
-   * @var Config
-   */
-  protected $config;
-
-  /**
    * Set up Illuminage
    *
    * @param Container $container A base Container to bind onto
    */
-  public function __construct($container = null)
+  public function __construct(Container $app)
   {
-    $this->app = $this->createContainer($container);
-
-    // Bind instances
-    $this->config  = $this->app['config'];
-    $this->cache   = $this->app['illuminage.cache'];
-    $this->imagine = $this->app['imagine'];
-  }
-
-  /**
-   * Get an instance from the Container
-   *
-   * @param  string $key
-   *
-   * @return object
-   */
-  public function __get($key)
-  {
-    return $this->app->make($key);
-  }
-
-  /**
-   * Create Illuminage's IoC Container
-   *
-   * @param Container $container A base Container to bind onto
-   *
-   * @return Container
-   */
-  protected function createContainer($container = null)
-  {
-    $app = $container ?: new Container;
-    $me  = $this;
-
-    // System classes ---------------------------------------------- /
-
-    $app->bindIf('Filesystem', 'Illuminate\Filesystem\Filesystem');
-
-    $app->bindIf('request', function() {
-      return Request::createFromGlobals();
-    });
-
-    // Core classes ------------------------------------------------ /
-
-    $app->bindIf('config', function($app) {
-      $fileloader = new FileLoader($app['Filesystem'], __DIR__.'/../../');
-
-      return new Repository($fileloader, 'src/config');
-    });
-
-    $app->bindIf('cache', function($app) {
-      return new FileStore($app['Filesystem'], __DIR__.'/../../public');
-    });
-
-    $app->bindIf('url', function($app) {
-      $routeCollection = new RouteCollection;
-
-      return new UrlGenerator($routeCollection, $app['request']);
-    });
-
-    // Illuminage classes ------------------------------------------ /
-
-    $app->bindIf('imagine', function($app) use ($me) {
-      $engine  = $me->getOption('image_engine');
-      $imagine = "\Imagine\\$engine\Imagine";
-
-      return new $imagine;
-    });
-
-    $app->bindIf('illuminage.processor', function($app) {
-      return new ImageProcessor($app['imagine']);
-    });
-
-    $app->bindIf('illuminage.cache', function() use ($me) {
-      return new Cache($me);
-    });
-
-    return $app;
+    $this->app = $app;
   }
 
   /**
@@ -147,9 +37,7 @@ class Illuminage
    */
   public function getOption($option, $fallback = null)
   {
-    $root = class_exists('App') ? 'illuminage::' : 'config.';
-
-    return $this->config->get($root.$option, $fallback);
+    return $this->app['config']->get('illuminage::'.$option, $fallback);
   }
 
   ////////////////////////////////////////////////////////////////////
@@ -165,7 +53,7 @@ class Illuminage
    */
   public function image($image)
   {
-    return new Image($this, $image);
+    return new Image($this->app, $image);
   }
 
   /**
@@ -179,7 +67,7 @@ class Illuminage
    */
   public function thumb($image, $width, $height)
   {
-    $image = new Image($this, $image);
+    $image = new Image($this->app, $image);
     $image->thumbnail($width, $height);
 
     return $image;
@@ -211,11 +99,11 @@ class Illuminage
    */
   public function process(Image $image)
   {
-    $endpoint = $this->cache->getCachePathOf($image);
+    $endpoint = $this->app['illuminage.cache']->getCachePathOf($image);
 
     // If the image hasn't yet been processed, do it
     // and then cache it
-    if (!$this->cache->isCached($image)) {
+    if (!$this->app['illuminage.cache']->isCached($image)) {
       $quality = $image->getQuality() ?: $this->getOption('quality');
       $processedImage = $this->app['illuminage.processor']->process($image);
       $processedImage->save($endpoint, array('quality' => (int) $quality));
@@ -239,7 +127,7 @@ class Illuminage
   {
     return $this->app['url']->asset(
       $this->getOption('cache_folder').
-      $this->cache->getHashOf($image));
+      $this->app['illuminage.cache']->getHashOf($image));
   }
 
   /**
@@ -263,5 +151,4 @@ class Illuminage
   {
     return $this->getPublicFolder().$this->getOption('cache_folder');
   }
-
 }

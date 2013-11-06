@@ -29,8 +29,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Illuminage": "src/"
+      "Illuminage": "src"
     }
-  },
-  "minimum-stability": "dev"
+  }
 }

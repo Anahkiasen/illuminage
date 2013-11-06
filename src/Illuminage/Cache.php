@@ -6,7 +6,6 @@ namespace Illuminage;
  */
 class Cache
 {
-
   /**
    * The Illuminage instance
    *
@@ -70,5 +69,4 @@ class Cache
   {
     return file_exists($this->getCachePathOf($image));
   }
-
 }
