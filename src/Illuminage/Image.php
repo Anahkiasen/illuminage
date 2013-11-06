@@ -117,19 +117,6 @@ class Image extends Tag
     return $this->quality;
   }
 
-  /**
-   * Get the salts with the various processed properties
-   *
-   * @return array
-   */
-  public function getProcessedSalts()
-  {
-    $salts = $this->salts;
-    $salts = $this->processThumbnail($salts);
-
-    return $salts;
-  }
-
   // Original image informations ----------------------------------- /
 
   /**
@@ -242,7 +229,7 @@ class Image extends Tag
    */
   public function thumbnail($width, $height)
   {
-    $this->salts['_thumbnail'] = new Box($width, $height);
+    $this->salts['thumbnail'] = [new Box($width, $height)];
 
     return $this;
   }
@@ -301,47 +288,6 @@ class Image extends Tag
     $this->quality = $quality;
 
     return $this;
-  }
-
-  // Processed filters --------------------------------------------- /
-
-  /**
-   * Process the thumbnail salt
-   *
-   * @param  array  $salts        An array of salts
-   *
-   * @return array
-   */
-  protected function processThumbnail(array $salts)
-  {
-    if (isset($salts['_thumbnail'])) {
-      $box = $salts['_thumbnail'];
-      unset($salts['_thumbnail']);
-
-      // Compute thumbnail ratio
-      $ratios = array(
-        $box->getWidth()  / $this->getOriginalSize()->getWidth(),
-        $box->getHeight() / $this->getOriginalSize()->getHeight()
-      );
-      if     ($this->getOriginalSize()->getWidth()  < $box->getWidth())  $ratio = $ratios[0];
-      elseif ($this->getOriginalSize()->getHeight() < $box->getHeight()) $ratio = $ratios[1];
-      else   $ratio = max($ratios);
-
-      // Resize this to fit bounds
-      $resize = $this->getOriginalSize()->scale($ratio);
-      $salts['resize'] = array($resize);
-
-      // Crop image
-      $salts['crop'] = array(
-        new Point(
-          max(0, round(($resize->getWidth()  - $box->getWidth())  / 2)),
-          max(0, round(($resize->getHeight() - $box->getHeight()) / 2))
-        ),
-        $box
-      );
-    }
-
-    return $salts;
   }
 
   ////////////////////////////////////////////////////////////////////
