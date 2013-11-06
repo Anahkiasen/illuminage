@@ -1,35 +1,35 @@
 {
-  "name": "anahkiasen/illuminage",
-  "description": "Wrapper for the Imagine library to hook into the Laravel framework",
-  "license": "MIT",
-  "keywords": [
-    "laravel",
-    "imagine",
-    "thumb",
-    "images"
-  ],
-  "authors": [
-    {
-      "name": "Maxime Fabre",
-      "email": "ehtnam6@gmail.com"
-    }
-  ],
-  "require": {
-    "php": ">=5.3.0",
-    "anahkiasen/html-object": "dev-master",
-    "illuminate/cache": "~4",
-    "illuminate/container": "~4",
-    "illuminate/config": "~4",
-    "illuminate/routing": "~4",
-    "illuminate/support": "~4",
-    "imagine/Imagine": "dev-develop"
-  },
-  "require-dev": {
-    "mockery/mockery": "dev-master"
-  },
-  "autoload": {
-    "psr-0": {
-      "Illuminage": "src"
-    }
-  }
+	"name": "anahkiasen/illuminage",
+	"description": "Wrapper for the Imagine library to hook into the Laravel framework",
+	"license": "MIT",
+	"keywords": [
+		"laravel",
+		"imagine",
+		"thumb",
+		"images"
+	],
+	"authors": [
+		{
+			"name": "Maxime Fabre",
+			"email": "ehtnam6@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"anahkiasen/html-object": "dev-master",
+		"illuminate/cache": "~4",
+		"illuminate/container": "~4",
+		"illuminate/config": "~4",
+		"illuminate/routing": "~4",
+		"illuminate/support": "~4",
+		"imagine/Imagine": "dev-develop"
+	},
+	"require-dev": {
+		"mockery/mockery": "dev-master"
+	},
+	"autoload": {
+		"psr-0": {
+			"Illuminage": "src"
+		}
+	}
 }

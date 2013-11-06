@@ -15,121 +15,121 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class IlluminageServiceProvider extends ServiceProvider
 {
-  /**
-   * Indicates if loading of the provider is deferred.
-   *
-   * @var bool
-   */
-  protected $defer = false;
+	/**
+	 * Indicates if loading of the provider is deferred.
+	 *
+	 * @var bool
+	 */
+	protected $defer = false;
 
-  /**
-   * Register the service provider.
-   *
-   * @return void
-   */
-  public function register()
-  {
-    // Register config file
-    $this->app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
+	/**
+	 * Register the service provider.
+	 *
+	 * @return void
+	 */
+	public function register()
+	{
+		// Register config file
+		$this->app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
 
-    $this->app = static::make($this->app);
-  }
+		$this->app = static::make($this->app);
+	}
 
-  /**
-   * Bootstrap the application events.
-   *
-   * @return void
-   */
-  public function boot()
-  {
-    //
-  }
+	/**
+	 * Bootstrap the application events.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		//
+	}
 
-  ////////////////////////////////////////////////////////////////////
-  /////////////////////////// CLASS BINDINGS /////////////////////////
-  ////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////
+	/////////////////////////// CLASS BINDINGS /////////////////////////
+	////////////////////////////////////////////////////////////////////
 
-  /**
-   * Make a Rocketeer container
-   *
-   * @return Container
-   */
-  public static function make($app = null)
-  {
-    if (!$app) {
-      $app = new Container;
-    }
+	/**
+	 * Make a Rocketeer container
+	 *
+	 * @return Container
+	 */
+	public static function make($app = null)
+	{
+		if (!$app) {
+			$app = new Container;
+		}
 
-    // Bind classes
-    $serviceProvider = new static($app);
-    $app = $serviceProvider->bindCoreClasses($app);
-    $app = $serviceProvider->bindClasses($app);
+		// Bind classes
+		$serviceProvider = new static($app);
+		$app = $serviceProvider->bindCoreClasses($app);
+		$app = $serviceProvider->bindClasses($app);
 
-    return $app;
-  }
+		return $app;
+	}
 
-  /**
-   * Bind the core classes
-   *
-   * @param  Container $app
-   *
-   * @return Container
-   */
-  public function bindCoreClasses(Container $app)
-  {
-    $app->bindIf('Filesystem', 'Illuminate\Filesystem\Filesystem');
+	/**
+	 * Bind the core classes
+	 *
+	 * @param  Container $app
+	 *
+	 * @return Container
+	 */
+	public function bindCoreClasses(Container $app)
+	{
+		$app->bindIf('Filesystem', 'Illuminate\Filesystem\Filesystem');
 
-    $app->bindIf('request', function() {
-      return Request::createFromGlobals();
-    });
+		$app->bindIf('request', function() {
+			return Request::createFromGlobals();
+		});
 
-    $app->bindIf('config', function($app) {
-      $fileloader = new FileLoader($app['files'], __DIR__.'/../config');
+		$app->bindIf('config', function($app) {
+			$fileloader = new FileLoader($app['files'], __DIR__.'/../config');
 
-      return new Repository($fileloader, 'config');
-    });
+			return new Repository($fileloader, 'config');
+		});
 
-    $app->bindIf('cache', function($app) {
-      return new FileStore($app['Filesystem'], __DIR__.'/../../public');
-    });
+		$app->bindIf('cache', function($app) {
+			return new FileStore($app['Filesystem'], __DIR__.'/../../public');
+		});
 
-    $app->bindIf('url', function($app) {
-      $routeCollection = new RouteCollection;
+		$app->bindIf('url', function($app) {
+			$routeCollection = new RouteCollection;
 
-      return new UrlGenerator($routeCollection, $app['request']);
-    });
+			return new UrlGenerator($routeCollection, $app['request']);
+		});
 
-    return $app;
-  }
+		return $app;
+	}
 
-  /**
-   * Bind Illuminage's classes
-   *
-   * @param Container $app
-   *
-   * @return Container
-   */
-  public function bindClasses(Container $app)
-  {
-    $app->bindIf('illuminage', function($app) {
-      return new Illuminage($app);
-    });
+	/**
+	 * Bind Illuminage's classes
+	 *
+	 * @param Container $app
+	 *
+	 * @return Container
+	 */
+	public function bindClasses(Container $app)
+	{
+		$app->bindIf('illuminage', function($app) {
+			return new Illuminage($app);
+		});
 
-    $app->bindIf('imagine', function($app) {
-      $engine  = $app['illuminage']->getOption('image_engine');
-      $imagine = "\Imagine\\$engine\Imagine";
+		$app->bindIf('imagine', function($app) {
+			$engine  = $app['illuminage']->getOption('image_engine');
+			$imagine = "\Imagine\\$engine\Imagine";
 
-      return new $imagine;
-    });
+			return new $imagine;
+		});
 
-    $app->bindIf('illuminage.processor', function($app) {
-      return new ImageProcessor($app['imagine']);
-    });
+		$app->bindIf('illuminage.processor', function($app) {
+			return new ImageProcessor($app['imagine']);
+		});
 
-    $app->bindIf('illuminage.cache', function($app) {
-      return new Cache($app['illuminage']);
-    });
+		$app->bindIf('illuminage.cache', function($app) {
+			return new Cache($app['illuminage']);
+		});
 
-    return $app;
-  }
+		return $app;
+	}
 }

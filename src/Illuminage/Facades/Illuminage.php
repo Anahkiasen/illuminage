@@ -9,17 +9,17 @@ use Illuminage\IlluminageServiceProvider;
  */
 class Illuminage extends Facade
 {
-  /**
-   * Retrieve Illuminage from the Container
-   *
-   * @return string
-   */
-  public static function getFacadeAccessor()
-  {
-    if (!static::$app) {
-      static::$app = IlluminageServiceProvider::make();
-    }
+	/**
+	 * Retrieve Illuminage from the Container
+	 *
+	 * @return string
+	 */
+	public static function getFacadeAccessor()
+	{
+		if (!static::$app) {
+			static::$app = IlluminageServiceProvider::make();
+		}
 
-    return 'illuminage';
-  }
+		return 'illuminage';
+	}
 }
