@@ -48,4 +48,16 @@ class ImageTest extends IlluminageTests
     $this->assertEquals('http://:/d3bc6aa8ca3bf86754e98b34b10ea18f.jpg', $image->getPath());
     $this->unlink('d3bc6aa8ca3bf86754e98b34b10ea18f.jpg');
   }
+
+  public function testCanGetSplImageInstance()
+  {
+    $this->assertInstanceOf('Illuminage\SplFileImage', $this->image->getImage());
+  }
+
+  public function testCanGetOriginalDimensions()
+  {
+    $this->assertInstanceOf('Imagine\Image\Box', $this->image->getOriginalSize());
+    $this->assertEquals(720, $this->image->getOriginalSize()->getWidth());
+    $this->assertEquals(480, $this->image->getOriginalSize()->getHeight());
+  }
 }
