@@ -65,8 +65,13 @@ class Illuminage
    *
    * @return Image
    */
-  public function thumb($image, $width, $height)
+  public function thumb($image, $width, $height = null)
   {
+    // Fallback size for height
+    if (!$height) {
+      $height = $width;
+    }
+
     $image = new Image($this->app, $image);
     $image->thumbnail($width, $height);
 
