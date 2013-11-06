@@ -229,7 +229,7 @@ class Image extends Tag
 	 */
 	public function thumbnail($width, $height)
 	{
-		$this->salts['thumbnail'] = [new Box($width, $height)];
+		$this->salts['thumbnail'] = array(new Box($width, $height));
 
 		return $this;
 	}
