@@ -1,6 +1,6 @@
 # Illuminage
 
-## 2.0.0
+## 1.1.0 (stable)
 
 - Refactor of the code
 - Add ability to set per instance or globally the image quality
