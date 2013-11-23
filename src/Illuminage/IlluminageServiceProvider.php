@@ -29,9 +29,6 @@ class IlluminageServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		// Register config file
-		$this->app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
-
 		$this->app = static::make($this->app);
 	}
 
@@ -42,7 +39,7 @@ class IlluminageServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		//
+		// ...
 	}
 
 	////////////////////////////////////////////////////////////////////
@@ -77,7 +74,7 @@ class IlluminageServiceProvider extends ServiceProvider
 	 */
 	public function bindCoreClasses(Container $app)
 	{
-		$app->bindIf('Filesystem', 'Illuminate\Filesystem\Filesystem');
+		$app->bindIf('files', 'Illuminate\Filesystem\Filesystem');
 
 		$app->bindIf('request', function() {
 			return Request::createFromGlobals();
@@ -87,7 +84,7 @@ class IlluminageServiceProvider extends ServiceProvider
 			$fileloader = new FileLoader($app['files'], __DIR__.'/../config');
 
 			return new Repository($fileloader, 'config');
-		});
+		}, true);
 
 		$app->bindIf('cache', function($app) {
 			return new FileStore($app['Filesystem'], __DIR__.'/../../public');
@@ -98,6 +95,15 @@ class IlluminageServiceProvider extends ServiceProvider
 
 			return new UrlGenerator($routeCollection, $app['request']);
 		});
+
+		// Register config file
+		$app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
+
+		// Set cache folder if non existing
+		$cache = $app['config']->get('illuminage::cache_folder');
+		if (!file_exists($cache)) {
+			$app['config']->set('illuminage::cache_folder', 'public/');
+		}
 
 		return $app;
 	}

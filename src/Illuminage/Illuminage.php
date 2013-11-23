@@ -57,6 +57,28 @@ class Illuminage
 	}
 
 	/**
+	 * Resize an image
+	 *
+	 * @param string  $image
+	 * @param integer $width
+	 * @param integer $height
+	 *
+	 * @return Image
+	 */
+	public function resize($image, $width, $height = null)
+	{
+		// Fallback size for height
+		if (!$height) {
+			$height = $width;
+		}
+
+		$image = new Image($this->app, $image);
+		$image->resize($width, $height);
+
+		return $image;
+	}
+
+	/**
 	 * Create a resized image
 	 *
 	 * @param string $image
@@ -142,7 +164,7 @@ class Illuminage
 	 */
 	public function getPublicFolder()
 	{
-		return $this->app['path.public']
+		return isset($this->app['path.public'])
 			? $this->app['path.public'].'/'
 			: './';
 	}
