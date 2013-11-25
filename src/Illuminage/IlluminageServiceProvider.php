@@ -100,7 +100,7 @@ class IlluminageServiceProvider extends ServiceProvider
 		$app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
 
 		// Set cache folder if non existing
-		$cache = $app['config']->get('illuminage::cache_folder');
+		$cache = $app['path.public'].'/'.$app['config']->get('illuminage::cache_folder');
 		if (!file_exists($cache)) {
 			$app['config']->set('illuminage::cache_folder', 'public/');
 		}

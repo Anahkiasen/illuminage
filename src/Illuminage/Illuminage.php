@@ -164,7 +164,7 @@ class Illuminage
 	 */
 	public function getPublicFolder()
 	{
-		return isset($this->app['path.public'])
+		return $this->app->bound('path.public')
 			? $this->app['path.public'].'/'
 			: './';
 	}
