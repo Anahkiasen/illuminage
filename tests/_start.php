@@ -23,7 +23,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 	public function setUp()
 	{
 		$this->app = Illuminage\IlluminageServiceProvider::make();
-		$this->app['path.public'] = 'tests/public';
+		$this->app->instance('path.public', 'tests/public');
 
 		// Bind mocked config
 		$this->app->bind('config', function() {

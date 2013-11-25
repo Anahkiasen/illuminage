@@ -99,12 +99,6 @@ class IlluminageServiceProvider extends ServiceProvider
 		// Register config file
 		$app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
 
-		// Set cache folder if non existing
-		$cache = $app['path.public'].'/'.$app['config']->get('illuminage::cache_folder');
-		if (!file_exists($cache)) {
-			$app['config']->set('illuminage::cache_folder', 'public/');
-		}
-
 		return $app;
 	}
 
@@ -135,6 +129,12 @@ class IlluminageServiceProvider extends ServiceProvider
 		$app->bindIf('illuminage.cache', function($app) {
 			return new Cache($app['illuminage']);
 		});
+
+		// Set cache folder if non existing
+		$cache = $app['illuminage']->getPublicFolder().'/'.$app['config']->get('illuminage::cache_folder');
+		if (!file_exists($cache)) {
+			$app['config']->set('illuminage::cache_folder', 'public/');
+		}
 
 		return $app;
 	}
