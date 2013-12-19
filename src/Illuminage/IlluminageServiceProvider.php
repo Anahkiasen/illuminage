@@ -8,7 +8,7 @@ use Illuminate\Container\Container;
 use Illuminate\Http\Request;
 use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\ServiceProvider;
-use Symfony\Component\Routing\RouteCollection;
+use Illuminate\Routing\RouteCollection;
 
 /**
  * Service Provider for Laravel 4
@@ -74,6 +74,10 @@ class IlluminageServiceProvider extends ServiceProvider
 	 */
 	public function bindCoreClasses(Container $app)
 	{
+		if ($app->bound('events')) {
+			return $app;
+		}
+
 		$app->bindIf('files', 'Illuminate\Filesystem\Filesystem');
 
 		$app->bindIf('request', function() {
