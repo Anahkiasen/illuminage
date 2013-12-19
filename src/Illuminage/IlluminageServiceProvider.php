@@ -100,9 +100,6 @@ class IlluminageServiceProvider extends ServiceProvider
 			return new UrlGenerator($routeCollection, $app['request']);
 		});
 
-		// Register config file
-		$app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
-
 		return $app;
 	}
 
@@ -115,6 +112,9 @@ class IlluminageServiceProvider extends ServiceProvider
 	 */
 	public function bindClasses(Container $app)
 	{
+		// Register config file
+		$app['config']->package('anahkiasen/illuminage', __DIR__.'/../config');
+
 		$app->bindIf('illuminage', function($app) {
 			return new Illuminage($app);
 		});
