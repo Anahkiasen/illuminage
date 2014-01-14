@@ -1,6 +1,11 @@
 # Illuminage
 
-## 1.1.0 (stable)
+## 1.2.0
+
+- Add shortcut for `resize`
+- Fixed various bugs
+
+## 1.1.0
 
 - Refactor of the code
 - Add ability to set per instance or globally the image quality
