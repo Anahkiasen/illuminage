@@ -1,7 +1,11 @@
 
 
 Code Coverage Report:     
+<<<<<<< HEAD
   2013-12-19 18:23:51     
+=======
+  2014-01-14 13:06:21     
+>>>>>>> Update dependencies
                           
  Summary:                 
   Classes: 20.00% (1/5)   

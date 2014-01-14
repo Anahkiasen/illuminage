@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Anahkiasen/html-object.git",
-                "reference": "2c6cdc6368d19ac42357f7ae17bd99652a1916e4"
+                "reference": "71eb5bd920e845aaea0d7face6e73aa9a63d6bde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/2c6cdc6368d19ac42357f7ae17bd99652a1916e4",
-                "reference": "2c6cdc6368d19ac42357f7ae17bd99652a1916e4",
+                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/71eb5bd920e845aaea0d7face6e73aa9a63d6bde",
+                "reference": "71eb5bd920e845aaea0d7face6e73aa9a63d6bde",
                 "shasum": ""
             },
             "require": {
@@ -39,21 +39,34 @@
                 }
             ],
             "description": "A set of classes to create and manipulate HTML objects abstractions",
-            "time": "2013-11-19 15:20:02"
+            "time": "2014-01-14 11:42:36"
         },
         {
             "name": "illuminate/cache",
+<<<<<<< HEAD
             "version": "v4.1.9",
+=======
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Cache",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
+<<<<<<< HEAD
                 "reference": "275e6f7207a373bdb5fd7986ac1df7694736ac72"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/cache/zipball/275e6f7207a373bdb5fd7986ac1df7694736ac72",
                 "reference": "275e6f7207a373bdb5fd7986ac1df7694736ac72",
+=======
+                "reference": "bd2165b5e2c2e15442eabe0935271a1208f779f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/bd2165b5e2c2e15442eabe0935271a1208f779f4",
+                "reference": "bd2165b5e2c2e15442eabe0935271a1208f779f4",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -91,11 +104,19 @@
                     "role": "Developer"
                 }
             ],
+<<<<<<< HEAD
             "time": "2013-11-26 20:30:56"
         },
         {
             "name": "illuminate/config",
             "version": "v4.1.9",
+=======
+            "time": "2014-01-04 17:30:47"
+        },
+        {
+            "name": "illuminate/config",
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Config",
             "source": {
                 "type": "git",
@@ -143,7 +164,11 @@
         },
         {
             "name": "illuminate/container",
+<<<<<<< HEAD
             "version": "v4.1.9",
+=======
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Container",
             "source": {
                 "type": "git",
@@ -189,17 +214,30 @@
         },
         {
             "name": "illuminate/cookie",
+<<<<<<< HEAD
             "version": "v4.1.9",
+=======
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Cookie",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cookie.git",
+<<<<<<< HEAD
                 "reference": "a3b3342a61d29a556480da7229ec3661e2643129"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/cookie/zipball/a3b3342a61d29a556480da7229ec3661e2643129",
                 "reference": "a3b3342a61d29a556480da7229ec3661e2643129",
+=======
+                "reference": "ff8e19808d52103f19810cf1354d3f1d2dbc0fea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/cookie/zipball/ff8e19808d52103f19810cf1354d3f1d2dbc0fea",
+                "reference": "ff8e19808d52103f19810cf1354d3f1d2dbc0fea",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -236,11 +274,19 @@
                     "role": "Developer"
                 }
             ],
+<<<<<<< HEAD
             "time": "2013-10-29 16:05:01"
         },
         {
             "name": "illuminate/encryption",
             "version": "v4.1.9",
+=======
+            "time": "2014-01-12 05:51:25"
+        },
+        {
+            "name": "illuminate/encryption",
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Encryption",
             "source": {
                 "type": "git",
@@ -287,17 +333,30 @@
         },
         {
             "name": "illuminate/filesystem",
+<<<<<<< HEAD
             "version": "v4.1.9",
+=======
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
+<<<<<<< HEAD
                 "reference": "c91c481a2436c22b313ee79431e45d4ce9a6a095"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/filesystem/zipball/c91c481a2436c22b313ee79431e45d4ce9a6a095",
                 "reference": "c91c481a2436c22b313ee79431e45d4ce9a6a095",
+=======
+                "reference": "d00467c2bb5a634b95e6396745375985b6ac25f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/d00467c2bb5a634b95e6396745375985b6ac25f9",
+                "reference": "d00467c2bb5a634b95e6396745375985b6ac25f9",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -331,11 +390,19 @@
                     "role": "Developer"
                 }
             ],
+<<<<<<< HEAD
             "time": "2013-11-20 23:29:36"
         },
         {
             "name": "illuminate/http",
             "version": "v4.1.9",
+=======
+            "time": "2013-12-27 17:36:59"
+        },
+        {
+            "name": "illuminate/http",
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Http",
             "source": {
                 "type": "git",
@@ -385,17 +452,30 @@
         },
         {
             "name": "illuminate/routing",
+<<<<<<< HEAD
             "version": "v4.1.9",
+=======
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Routing",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/routing.git",
+<<<<<<< HEAD
                 "reference": "acea134f195b55b8fbd01af69cb991c12a6977a6"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/routing/zipball/acea134f195b55b8fbd01af69cb991c12a6977a6",
                 "reference": "acea134f195b55b8fbd01af69cb991c12a6977a6",
+=======
+                "reference": "05bb044b1f67cc59bb410a50713f3ad2291ab911"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/routing/zipball/05bb044b1f67cc59bb410a50713f3ad2291ab911",
+                "reference": "05bb044b1f67cc59bb410a50713f3ad2291ab911",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -435,21 +515,38 @@
                     "role": "Developer"
                 }
             ],
+<<<<<<< HEAD
             "time": "2013-12-19 01:54:07"
         },
         {
             "name": "illuminate/session",
             "version": "v4.1.9",
+=======
+            "time": "2014-01-12 10:55:57"
+        },
+        {
+            "name": "illuminate/session",
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Session",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
+<<<<<<< HEAD
                 "reference": "57b71c16f7389625b622ec0c08aec68f9ae9ce94"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/session/zipball/57b71c16f7389625b622ec0c08aec68f9ae9ce94",
                 "reference": "57b71c16f7389625b622ec0c08aec68f9ae9ce94",
+=======
+                "reference": "c28a0f4f79ebb3f2cb2cdb2f2c7a8391df857911"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/session/zipball/c28a0f4f79ebb3f2cb2cdb2f2c7a8391df857911",
+                "reference": "c28a0f4f79ebb3f2cb2cdb2f2c7a8391df857911",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -490,21 +587,38 @@
                     "role": "Developer"
                 }
             ],
+<<<<<<< HEAD
             "time": "2013-12-06 17:50:34"
         },
         {
             "name": "illuminate/support",
             "version": "v4.1.9",
+=======
+            "time": "2014-01-12 10:55:57"
+        },
+        {
+            "name": "illuminate/support",
+            "version": "v4.1.16",
+>>>>>>> Update dependencies
             "target-dir": "Illuminate/Support",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
+<<<<<<< HEAD
                 "reference": "5625c8d61171f57da3495d2163370b03c0cfa94a"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/support/zipball/5625c8d61171f57da3495d2163370b03c0cfa94a",
                 "reference": "5625c8d61171f57da3495d2163370b03c0cfa94a",
+=======
+                "reference": "ccc9a5dc4b79926407b5904dde419a5641c2880f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/ccc9a5dc4b79926407b5904dde419a5641c2880f",
+                "reference": "ccc9a5dc4b79926407b5904dde419a5641c2880f",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -541,7 +655,11 @@
                     "role": "Developer"
                 }
             ],
+<<<<<<< HEAD
             "time": "2013-12-12 13:21:25"
+=======
+            "time": "2014-01-13 19:39:13"
+>>>>>>> Update dependencies
         },
         {
             "name": "imagine/imagine",
@@ -549,12 +667,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
+<<<<<<< HEAD
                 "reference": "016e17fd2469690abc9c015cf07b4898dff1471d"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/016e17fd2469690abc9c015cf07b4898dff1471d",
                 "reference": "016e17fd2469690abc9c015cf07b4898dff1471d",
+=======
+                "reference": "5e013323dacbb7d6ab0c0d55692e6b75d1fb30d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/5e013323dacbb7d6ab0c0d55692e6b75d1fb30d2",
+                "reference": "5e013323dacbb7d6ab0c0d55692e6b75d1fb30d2",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -598,6 +725,7 @@
                 "image manipulation",
                 "image processing"
             ],
+<<<<<<< HEAD
             "time": "2013-12-03 16:47:33"
         },
         {
@@ -612,6 +740,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/03ede52a1f360441b5826cb8a798e0d0a919731f",
                 "reference": "03ede52a1f360441b5826cb8a798e0d0a919731f",
+=======
+            "time": "2013-12-23 10:54:18"
+        },
+        {
+            "name": "nesbot/carbon",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "21c4cb4301969c7d85aee8a62eefdfa881413af0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/21c4cb4301969c7d85aee8a62eefdfa881413af0",
+                "reference": "21c4cb4301969c7d85aee8a62eefdfa881413af0",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -644,7 +788,11 @@
                 "datetime",
                 "time"
             ],
+<<<<<<< HEAD
             "time": "2013-12-05 04:13:29"
+=======
+            "time": "2014-01-07 05:10:44"
+>>>>>>> Update dependencies
         },
         {
             "name": "psr/log",
@@ -686,17 +834,30 @@
         },
         {
             "name": "symfony/debug",
+<<<<<<< HEAD
             "version": "v2.4.0",
+=======
+            "version": "v2.4.1",
+>>>>>>> Update dependencies
             "target-dir": "Symfony/Component/Debug",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
+<<<<<<< HEAD
                 "reference": "848565cb83d985eb77dac3f9e4486f3bce92b4a2"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/Debug/zipball/848565cb83d985eb77dac3f9e4486f3bce92b4a2",
                 "reference": "848565cb83d985eb77dac3f9e4486f3bce92b4a2",
+=======
+                "reference": "74110be5ec681a83fc5bd66dd5fd29fe85fe9c1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/74110be5ec681a83fc5bd66dd5fd29fe85fe9c1f",
+                "reference": "74110be5ec681a83fc5bd66dd5fd29fe85fe9c1f",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -737,21 +898,38 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2013-12-03 14:52:22"
         },
         {
             "name": "symfony/event-dispatcher",
             "version": "v2.4.0",
+=======
+            "time": "2014-01-01 09:02:49"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v2.4.1",
+>>>>>>> Update dependencies
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
+<<<<<<< HEAD
                 "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
                 "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
+=======
+                "reference": "e3ba42f6a70554ed05749e61b829550f6ac33601"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e3ba42f6a70554ed05749e61b829550f6ac33601",
+                "reference": "e3ba42f6a70554ed05749e61b829550f6ac33601",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -791,21 +969,38 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2013-12-03 14:52:22"
         },
         {
             "name": "symfony/finder",
             "version": "v2.4.0",
+=======
+            "time": "2013-12-28 08:12:03"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.4.1",
+>>>>>>> Update dependencies
             "target-dir": "Symfony/Component/Finder",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
+<<<<<<< HEAD
                 "reference": "72356bf0646b11af1bae666c28a639bd8ede459f"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/Finder/zipball/72356bf0646b11af1bae666c28a639bd8ede459f",
                 "reference": "72356bf0646b11af1bae666c28a639bd8ede459f",
+=======
+                "reference": "6904345cf2b3bbab1f6d6e4ce1724cb99df9f00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/6904345cf2b3bbab1f6d6e4ce1724cb99df9f00a",
+                "reference": "6904345cf2b3bbab1f6d6e4ce1724cb99df9f00a",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -838,21 +1033,38 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2013-11-26 16:40:27"
         },
         {
             "name": "symfony/http-foundation",
             "version": "v2.4.0",
+=======
+            "time": "2014-01-01 08:14:50"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v2.4.1",
+>>>>>>> Update dependencies
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
+<<<<<<< HEAD
                 "reference": "381245ba3e507a3e9c5b4c2cbf344a312fb6081d"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/381245ba3e507a3e9c5b4c2cbf344a312fb6081d",
                 "reference": "381245ba3e507a3e9c5b4c2cbf344a312fb6081d",
+=======
+                "reference": "6c6b8a7bcd7e2cc920cd6acace563fdbf121d844"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/6c6b8a7bcd7e2cc920cd6acace563fdbf121d844",
+                "reference": "6c6b8a7bcd7e2cc920cd6acace563fdbf121d844",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -888,21 +1100,38 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2013-11-28 10:27:26"
         },
         {
             "name": "symfony/http-kernel",
             "version": "v2.4.0",
+=======
+            "time": "2014-01-05 02:10:50"
+        },
+        {
+            "name": "symfony/http-kernel",
+            "version": "v2.4.1",
+>>>>>>> Update dependencies
             "target-dir": "Symfony/Component/HttpKernel",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
+<<<<<<< HEAD
                 "reference": "e5afbeabef99f916f0e0d76f68a36343aa293387"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/e5afbeabef99f916f0e0d76f68a36343aa293387",
                 "reference": "e5afbeabef99f916f0e0d76f68a36343aa293387",
+=======
+                "reference": "0605eedeb52c4d3a3144128d8336395a57be60d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/0605eedeb52c4d3a3144128d8336395a57be60d4",
+                "reference": "0605eedeb52c4d3a3144128d8336395a57be60d4",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -959,7 +1188,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2013-12-03 15:23:03"
+=======
+            "time": "2014-01-05 02:12:11"
+>>>>>>> Update dependencies
         }
     ],
     "packages-dev": [
@@ -969,12 +1202,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
+<<<<<<< HEAD
                 "reference": "fd9f745e335f8a0e68ef34f44f0560a54e44ef84"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/padraic/mockery/zipball/fd9f745e335f8a0e68ef34f44f0560a54e44ef84",
                 "reference": "fd9f745e335f8a0e68ef34f44f0560a54e44ef84",
+=======
+                "reference": "ab2c696982fa47bb21d3bff1cd97b6b657d6f4f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/ab2c696982fa47bb21d3bff1cd97b6b657d6f4f4",
+                "reference": "ab2c696982fa47bb21d3bff1cd97b6b657d6f4f4",
+>>>>>>> Update dependencies
                 "shasum": ""
             },
             "require": {
@@ -982,9 +1224,14 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "hamcrest/hamcrest": "1.1.0"
+                "hamcrest/hamcrest-php": "~1.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Mockery": "library/"
@@ -1015,7 +1262,11 @@
                 "test double",
                 "testing"
             ],
+<<<<<<< HEAD
             "time": "2013-11-26 20:36:44"
+=======
+            "time": "2014-01-13 13:26:51"
+>>>>>>> Update dependencies
         }
     ],
     "aliases": [
