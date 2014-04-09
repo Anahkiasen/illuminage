@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/Anahkiasen/illuminage.png?branch=master)](https://travis-ci.org/Anahkiasen/illuminage)
 [![Latest Stable Version](https://poser.pugx.org/anahkiasen/illuminage/v/stable.png)](https://packagist.org/packages/anahkiasen/illuminage)
 [![Total Downloads](https://poser.pugx.org/anahkiasen/illuminage/downloads.png)](https://packagist.org/packages/anahkiasen/illuminage)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/badges/quality-score.png?s=20d9a4be6695b7677c427eab73151c1a9d803044)](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/)
-[![Code Coverage](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/badges/coverage.png?s=f6e022cbcf1a51f82b5d9e6fb30bd1643fc70e76)](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/badges/quality-score.png?s=d542035e5d3e51442563d09c1fa28575f241a070)](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/)
+[![Code Coverage](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/badges/coverage.png?s=221ca0a5ff4b625fb6756c3de3bad218fbe2144b)](https://scrutinizer-ci.com/g/Anahkiasen/illuminage/)
 
 ## Setup
 
