@@ -25,6 +25,8 @@ Illuminage is a wrapper for the Imagine library to hook into the Laravel framewo
 ```php
 // This will create a cropped 200x300 thumb, cache it, and display it in an image tag
 echo Illuminage::thumb('image.jpg', 200, 300)
+// or
+echo Illuminage::image('image.jpg')->thumbnail(200, 300)
 
 // Shortcuts
 echo Illuminage::square('image.jpg', 300)
@@ -43,7 +45,7 @@ echo $thumb;
 You can at all time access the original Imagine instance used to render the images :
 
 ```php
-$thumb = new Thumb('foo.jpg', 200, 200);
+$thumb = Illuminage::image('foo.jpg')->thumbnail(200, 200);
 
 echo $thumb->grayscale()->onImage(function($image) {
   $image->flipVertically()->rotate(45);
