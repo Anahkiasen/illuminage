@@ -1,5 +1,7 @@
 <?php
-class ImageTest extends IlluminageTests
+namespace Illuminage;
+
+class ImageTest extends IlluminageTestCase
 {
 	public function testCanGetFullPathToOriginalImage()
 	{

@@ -1,7 +1,10 @@
 <?php
-include __DIR__.'/../vendor/autoload.php';
+namespace Illuminage;
 
-abstract class IlluminageTests extends PHPUnit_Framework_TestCase
+use PHPUnit_Framework_TestCase;
+use Mockery;
+
+abstract class IlluminageTestCase extends PHPUnit_Framework_TestCase
 {
 	/**
 	 * The test image hash
@@ -22,7 +25,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 	 */
 	public function setUp()
 	{
-		$this->app = Illuminage\IlluminageServiceProvider::make();
+		$this->app = IlluminageServiceProvider::make();
 		$this->app->instance('path.public', 'tests/public');
 
 		// Bind mocked config

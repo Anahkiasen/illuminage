@@ -1,6 +1,7 @@
 <?php
+namespace Illuminage;
 
-class CacheTest extends IlluminageTests
+class CacheTest extends IlluminageTestCase
 {
 	public function testCanComputeHashOfThumb()
 	{

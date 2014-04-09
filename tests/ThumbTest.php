@@ -1,6 +1,7 @@
 <?php
+namespace Illuminage;
 
-class ThumbTest extends IlluminageTests
+class ThumbTest extends IlluminageTestCase
 {
 	public function testCanCreateThumb()
 	{
