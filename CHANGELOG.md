@@ -1,5 +1,9 @@
 # Illuminage
 
+## 1.2.1
+
+- Add ability to change mode on `thumbnail` (inbound/outbound)
+
 ## 1.2.0
 
 - Add shortcut for `resize`

@@ -226,10 +226,18 @@ class Image extends Tag
 	 *
 	 * @param integer $width
 	 * @param integer $height
+	 * @param boolean $outboud
 	 */
-	public function thumbnail($width, $height)
+	public function thumbnail($width, $height = null, $outbound = true)
 	{
-		$this->salts['thumbnail'] = array(new Box($width, $height));
+		// Fallback size for height
+		if (!$height) {
+			$height = $width;
+		}
+
+		$mode = $outbound ? 'OUTBOUND' : 'INBOUND';
+		$mode = constant('Imagine\Image\ImageInterface::THUMBNAIL_'.$mode);
+		$this->salts['thumbnail'] = array(new Box($width, $height), $mode);
 
 		return $this;
 	}

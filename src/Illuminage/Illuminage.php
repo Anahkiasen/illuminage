@@ -72,7 +72,7 @@ class Illuminage
 			$height = $width;
 		}
 
-		$image = new Image($this->app, $image);
+		$image = $this->image($image);
 		$image->resize($width, $height);
 
 		return $image;
@@ -87,15 +87,10 @@ class Illuminage
 	 *
 	 * @return Image
 	 */
-	public function thumb($image, $width, $height = null)
+	public function thumb($image, $width, $height = null, $outbound = true)
 	{
-		// Fallback size for height
-		if (!$height) {
-			$height = $width;
-		}
-
-		$image = new Image($this->app, $image);
-		$image->thumbnail($width, $height);
+		$image = $this->image($image);
+		$image->thumbnail($width, $height, $outbound);
 
 		return $image;
 	}
@@ -103,14 +98,15 @@ class Illuminage
 	/**
 	 * Create a thumb image
 	 *
-	 * @param  string $image
+	 * @param  string  $image
 	 * @param  integer $size
+	 * @param  string  $outbound
 	 *
 	 * @return Image
 	 */
-	public function square($image, $size)
+	public function square($image, $size, $outbound = true)
 	{
-		return $this->thumb($image, $size, $size);
+		return $this->thumb($image, $size, $size, $outbound);
 	}
 
 	////////////////////////////////////////////////////////////////////

@@ -8,7 +8,7 @@ abstract class IlluminageTests extends PHPUnit_Framework_TestCase
 	 *
 	 * @var string
 	 */
-	protected $hash = '18e0bfde0662e1cabf3a2beeb79db265.jpg';
+	protected $hash = '44d9545b40f8e14d5371a4a3379e3755.jpg';
 
 	/**
 	 * The Container

@@ -1,24 +1,20 @@
 
 
 Code Coverage Report:     
-<<<<<<< HEAD
-  2013-12-19 18:23:51     
-=======
-  2014-01-14 13:06:21     
->>>>>>> Update dependencies
+  2014-04-09 20:51:50     
                           
  Summary:                 
   Classes: 20.00% (1/5)   
   Methods: 68.29% (28/41) 
-  Lines:   69.35% (86/124)
+  Lines:   71.43% (90/126)
 
 \Illuminage::Cache
   Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 11/ 11)
 \Illuminage::Illuminage
-  Methods:  70.00% ( 7/10)   Lines:  70.97% ( 22/ 31)
+  Methods:  80.00% ( 8/10)   Lines:  75.00% ( 21/ 28)
 \Illuminage::Image
-  Methods:  70.00% (14/20)   Lines:  67.44% ( 29/ 43)
+  Methods:  65.00% (13/20)   Lines:  66.67% ( 32/ 48)
 \Illuminage::ImageProcessor
-  Methods:  50.00% ( 2/ 4)   Lines:  64.52% ( 20/ 31)
+  Methods:  50.00% ( 2/ 4)   Lines:  70.97% ( 22/ 31)
 \Illuminage::SplFileImage
   Methods:  33.33% ( 1/ 3)   Lines:  50.00% (  4/  8)

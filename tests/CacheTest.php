@@ -11,7 +11,7 @@ class CacheTest extends IlluminageTests
 	{
 		$thumb = $this->app['illuminage']->thumb('bar.png', 100, 100);
 
-		$this->assertEquals('7f44c835aa23df77012fe74d968477b7.png', $this->app['illuminage.cache']->getHashOf($thumb));
+		$this->assertEquals('ffe7af188f778cc3af4faf17b13a3409.png', $this->app['illuminage.cache']->getHashOf($thumb));
 	}
 
 	public function testCanGetPathToCache()
