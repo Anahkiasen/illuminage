@@ -235,7 +235,7 @@ class Image extends Tag
 			$height = $width;
 		}
 
-		$mode = $outbound ? 'OUTBOUND' : 'INBOUND';
+		$mode = $outbound ? 'OUTBOUND' : 'INSET';
 		$mode = constant('Imagine\Image\ImageInterface::THUMBNAIL_'.$mode);
 		$this->salts['thumbnail'] = array(new Box($width, $height), $mode);
 
