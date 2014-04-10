@@ -222,6 +222,42 @@ class Image extends Tag
 	}
 
 	/**
+	 * Crop an image
+	 *
+	 * @return self
+	 */
+	public function crop()
+	{
+		$arguments = func_get_args();
+		switch (sizeof($arguments)) {
+			case 1:
+				$point = new Point(0, 0);
+				$box   = new Box($arguments[0], $arguments[0]);
+				break;
+
+			case 2:
+				$point = new Point(0, 0);
+				$box   = new Box($arguments[0], $arguments[1]);
+				break;
+
+			case 3:
+				$point = new Point($arguments[2], $arguments[2]);
+				$box   = new Box($arguments[0], $arguments[1]);
+				break;
+
+			case 4:
+			default:
+				$point = new Point($arguments[2], $arguments[3]);
+				$box   = new Box($arguments[0], $arguments[1]);
+				break;
+		}
+
+		$this->salts['crop'] = array($point, $box);
+
+		return $this;
+	}
+
+	/**
 	 * Resize an Image, thumbnail style
 	 *
 	 * @param integer $width
