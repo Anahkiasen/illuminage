@@ -1,5 +1,10 @@
 # Illuminage
 
+## 1.2.2
+
+- Fix a bug in thumbnail default mode
+- Added `Illuminate::crop` alias
+
 ## 1.2.1
 
 - Add ability to change mode on `thumbnail` (inbound/outbound)
