@@ -1,3 +1,5 @@
+# DEPRECATED: Use [Glide](http://glide.thephpleague.com/) instead
+
 # Illuminage
 
 [![Build Status](https://travis-ci.org/Anahkiasen/illuminage.png?branch=master)](https://travis-ci.org/Anahkiasen/illuminage)
